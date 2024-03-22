@@ -27,12 +27,15 @@ class Explorador:
             (TipoComponenteLexico.NO_IDENTIFICADO, r'.*')]
 
     def __init__(self, archivo):
+        # Constructor del Explorador: Cuenta con un archivo, la lista de componentes y la lista de componentes que dan error
         self.archivo = archivo
         self.componentes = []
         self.errores = []
         self.__explorar()
 
     def __explorar(self):
+        # Se encarga de recorrer todas las lineas del archivo y ejecutar la funcion procesarLinea
+        # Al final, si encuentra errores, los imprime y devuelve false. En caso de exito, solo imprime los tokens
         counter = 1
         for linea in self.archivo:
             resultado = self.__procesarLinea(linea, counter)
@@ -47,6 +50,9 @@ class Explorador:
             return True
 
     def __procesarLinea(self, linea, numeroLinea):
+        # Procesa la linea N veces comparandola con los tipos de componentes lexicos.
+        # En caso de que algun componente lexico no sea identificado lo annade a los errores y salta a la siguiente linea
+        # Ignora comentarios y espacios en blanco.
         componentes = []
     
         while (linea != ""):
@@ -79,10 +85,12 @@ class Explorador:
         return componentes
     
     def __imprimirComponentes(self):
+        # Imprime los componentes
         for componente in self.componentes:
             print(componente)
 
     def __imprimirErrores(self):
+        # Imprime los errores usando la representacion de componente de error de string
         for error in self.errores:
             print(error.errorStr())
 
@@ -96,6 +104,7 @@ if __name__ == "__main__":
     #     Explorador(archivo)
 
     # except:
+    #   # Si hay algun error al abrir el archivo o en el explorador da el mensaje de error
     #     if (len(sys.argv) == 1):
     #         print("[Error]: Debe seleccionar un archivo")
     #     else:
