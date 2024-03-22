@@ -51,10 +51,9 @@ class Explorador:
     
         while (linea != ""):
 
-            
+            print(linea)
             for tipoComponente, regex in self.descriptoresComponentes:
 
-                print(tipoComponente)
                 respuesta = re.match(regex, linea)
 
                 if respuesta == None:
