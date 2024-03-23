@@ -14,10 +14,10 @@ juego {
 }
 
 [ ! ] error porque se esperan los parametros en medio de parentesis cuadrados
-mundo esBisiesto (año) {
+mundo esBisiesto (anno) {
     mod4 [ ? ] ir a mundo florFuego[año, 4] [ ; ]
-    mod100[ ? ] ir a mundo florFuego[año, 100] [ ; ]
-    mod400[ ? ] ir a mundo florFuego[año, 400] [ ; ]
+    mod100[ ? ] ir a mundo florFuego[anno, 100] [ ; ]
+    mod400[ ? ] ir a mundo florFuego[anno, 400] [ ; ]
     nivel [[mod4 [ <> ] 0 [ & ] mod100 [ >< ] 0] [ | ] [mod400 [ <> ] 0]] {
         bandera peach [ ; ]
     }
