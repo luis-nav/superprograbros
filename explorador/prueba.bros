@@ -1,0 +1,13 @@
+mundo imprimirCaracteres [palabra] {
+	longitud [ ? ] puntuacion[palabra] [ ; ]
+    indice [ ? ] 0 [ ; ]
+    minijuego [longitud [><] indice] {
+        caracter [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
+        ir a mundo estrella[caracter] [ ; ]
+        indice [ ? ] [indice + 1] [ ; ]
+    }
+}
+
+juego {
+	ir a mundo imprimirCaracteres [“hola”] [ ; ]
+}
