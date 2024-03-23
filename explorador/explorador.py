@@ -116,11 +116,7 @@ class Explorador:
 if __name__ == "__main__":
     # print("Estamos en: " + os.getcwd())
     # archivo = open(os.getcwd() + "\explorador\prueba.bros", "r", encoding="utf-8")
-<<<<<<< Updated upstream
-    archivo = open("pruebas.bros", "r", encoding="utf-8")
-=======
     archivo = open("explorador\pruebasErrores.bros", "r", encoding="utf-8")
->>>>>>> Stashed changes
     Explorador(archivo)
 
     # try:
