@@ -115,7 +115,8 @@ class Explorador:
 # Entrada programa
 if __name__ == "__main__":
     # print("Estamos en: " + os.getcwd())
-    archivo = open(os.getcwd() + "\explorador\prueba.bros", "r", encoding="utf-8")
+    # archivo = open(os.getcwd() + "\explorador\prueba.bros", "r", encoding="utf-8")
+    archivo = open("prueba.bros", "r", encoding="utf-8")
     Explorador(archivo)
 
     # try:
