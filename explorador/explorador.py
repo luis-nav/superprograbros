@@ -1,5 +1,6 @@
 import re
 import sys
+import os
 
 from ComponenteLexico import ComponenteLexico, TipoComponenteLexico
 
@@ -17,23 +18,24 @@ class Explorador:
 
     descriptoresComponentes = descriptoresComponentes = [ 
         (TipoComponenteLexico.COMENTARIO, r'^(\[ ! \]).*'),
-            (TipoComponenteLexico.ASIGNADOR, r'^(\[ \? \])'),
+            (TipoComponenteLexico.ASIGNADOR, r'(\[ \? \])'),
             (TipoComponenteLexico.PRINCIPAL, r'^(juego)'),
             (TipoComponenteLexico.FUNCION, r'^(mundo)'),
-            (TipoComponenteLexico.OPERADOR, r'^(\[ (\+|-|\*|/|) \])'),
+            (TipoComponenteLexico.OPERADOR, r'(\[ (\+|-|\*|\/|) \])'),
             (TipoComponenteLexico.INVOCACION, r'^(ir a mundo)'),
             (TipoComponenteLexico.REPETICION, r'^(minijuego)'),
             (TipoComponenteLexico.SI, r'^(nivel|tubo)'), # se juntan el if con el else
-            (TipoComponenteLexico.RETORNO, r'^(bandera)'), # se juntan el if con el else
-            (TipoComponenteLexico.ENTERO, r'^(-?[0-9]+)'),
-            (TipoComponenteLexico.FLOTANTE, r'^(-?[0-9]+\.[0-9]+)'),
+            (TipoComponenteLexico.RETORNO, r'^(bandera)'), 
+            (TipoComponenteLexico.ENTERO, r'(-?[0-9]+)'),
+            (TipoComponenteLexico.FLOTANTE, r'(-?[0-9]+\.[0-9]+)'),
             (TipoComponenteLexico.TEXTO, r'\".*\"'), # CORRECION
-            (TipoComponenteLexico.VALOR_BOOLEANO, r'^(peach|bowser)'),
-            (TipoComponenteLexico.COMPARADOR, r'^(\[ (<>|><|>-|<-|^^|--) \]'), # CORRECCION
+            (TipoComponenteLexico.VALOR_BOOLEANO, r'(peach|bowser)'),
+            (TipoComponenteLexico.COMPARADOR, r'\[ (<>|><|>-|<-|\^\^|--) \]'), # CORRECCION
             (TipoComponenteLexico.OPERADOR_BOOLEANO, r'\[ (&|\|) \]'), # backslash para usar el simbolo |
-            (TipoComponenteLexico.PUNTUACION, r'^(\[|\]|\{|\})'), # CORRECCION
-            (TipoComponenteLexico.IDENTIFICADOR, r'^([a-z]([a-zA-z0-9])*)'),
+            (TipoComponenteLexico.PUNTUACION, r'\(|\)|\{|\}'), # CORRECCION
+            (TipoComponenteLexico.IDENTIFICADOR, r'([a-z]([a-zA-z0-9])*)'),
             (TipoComponenteLexico.BLANCOS, r'^(\s)*'),
+            # (TipoComponenteLexico.FIN_INSTRUCCION, r'\[ ; \]'), # falta implementar fin de linea
             (TipoComponenteLexico.NO_IDENTIFICADO, r'.*')]
 
 
@@ -108,8 +110,10 @@ class Explorador:
 
 # Entrada programa
 if __name__ == "__main__":
-    archivo = open("prueba.bros", "r")
+    # print("Estamos en: " + os.getcwd())
+    archivo = open(os.getcwd() + "\explorador\prueba.bros", "r", encoding="utf-8")
     Explorador(archivo)
+
     # try:
     #     archivo = open("prueba.bros", "r")
     #     Explorador(archivo)
