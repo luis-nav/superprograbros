@@ -19,7 +19,7 @@ class Explorador:
             (TipoComponenteLexico.RETORNO, r'^(bandera)'), 
             (TipoComponenteLexico.ENTERO, r'(-?[0-9]+)'),
             (TipoComponenteLexico.FLOTANTE, r'(-?[0-9]+\.[0-9]+)'),
-            (TipoComponenteLexico.TEXTO, r'\".*\"'), # CORRECION
+            (TipoComponenteLexico.TEXTO, r'\"[^\"]*\"'), # CORRECION
             (TipoComponenteLexico.VALOR_BOOLEANO, r'(peach|bowser)'),
             (TipoComponenteLexico.COMPARADOR, r'\[ (<>|><|>-|<-|\^\^|--) \]'), # CORRECCION
             (TipoComponenteLexico.OPERADOR_BOOLEANO, r'\[ (&|\|) \]'), # backslash para usar el simbolo |
@@ -96,8 +96,8 @@ class Explorador:
                 break
         
         # print(*componentes)
-        for componente in componentes :
-            print(componente.toString())
+        # for componente in componentes :
+        #     print(componente.toString())
 
         return componentes
     
@@ -116,7 +116,7 @@ class Explorador:
 if __name__ == "__main__":
     # print("Estamos en: " + os.getcwd())
     # archivo = open(os.getcwd() + "\explorador\prueba.bros", "r", encoding="utf-8")
-    archivo = open("prueba.bros", "r", encoding="utf-8")
+    archivo = open("pruebas.bros", "r", encoding="utf-8")
     Explorador(archivo)
 
     # try:
