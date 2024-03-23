@@ -22,7 +22,7 @@ class TipoComponenteLexico(Enum):
     OPERADOR_BOOLEANO = auto()
     PUNTUACION = auto()
     BLANCOS = auto()
-    FIN_LINEA = auto()
+    FIN_INSTRUCCION = auto()
     NO_IDENTIFICADO = auto()
 
     
@@ -39,7 +39,7 @@ class ComponenteLexico:
         self.numeroColumna = numeroColumna
         self.lineaCodigo = lineaCodigo
 
-    def __str__(self):
+    def toString(self):
         #Devuelve el lexema y el tipo de componente cuando se le pida a la clase ComponenteLexico su representacion como string
         return f"<{self.lexema}> : {self.tipo:30}"
     

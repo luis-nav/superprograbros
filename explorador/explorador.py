@@ -5,15 +5,6 @@ import os
 from ComponenteLexico import ComponenteLexico, TipoComponenteLexico
 
 
-
-class ComponenteLexico:
-    def __init__(self, lexema, tipo, numeroLinea, numeroColumna, lineaCodigo):
-        self.lexema = lexema
-        self.tipo = tipo
-        self.numeroLinea = numeroLinea
-        self.numeroColumna = numeroColumna
-        self.lineaCodigo = lineaCodigo
-
 class Explorador:
 
     descriptoresComponentes = descriptoresComponentes = [ 
@@ -32,10 +23,11 @@ class Explorador:
             (TipoComponenteLexico.VALOR_BOOLEANO, r'(peach|bowser)'),
             (TipoComponenteLexico.COMPARADOR, r'\[ (<>|><|>-|<-|\^\^|--) \]'), # CORRECCION
             (TipoComponenteLexico.OPERADOR_BOOLEANO, r'\[ (&|\|) \]'), # backslash para usar el simbolo |
-            (TipoComponenteLexico.PUNTUACION, r'\(|\)|\{|\}'), # CORRECCION
-            (TipoComponenteLexico.IDENTIFICADOR, r'([a-z]([a-zA-z0-9])*)'),
-            (TipoComponenteLexico.BLANCOS, r'^(\s)*'),
-            # (TipoComponenteLexico.FIN_INSTRUCCION, r'\[ ; \]'), # falta implementar fin de linea
+            (TipoComponenteLexico.FIN_INSTRUCCION, r'\[ ; \]'), # falta implementar fin de linea
+            (TipoComponenteLexico.PUNTUACION, r'\[|\]|\(|\)|\{|\}|\,'), # CORRECCION
+            (TipoComponenteLexico.IDENTIFICADOR, r'[a-zA-Z][a-zA-Z0-9]*'),
+            (TipoComponenteLexico.BLANCOS, r'(\s)+'),
+            
             (TipoComponenteLexico.NO_IDENTIFICADO, r'.*')]
 
 
@@ -66,11 +58,17 @@ class Explorador:
         # Procesa la linea N veces comparandola con los tipos de componentes lexicos.
         # En caso de que algun componente lexico no sea identificado lo annade a los errores y salta a la siguiente linea
         # Ignora comentarios y espacios en blanco.
+        enciclado = 0
         componentes = []
     
         while (linea != ""):
+            #Prueba para terminar enciclado
+            # enciclado+= 1
+            # if(enciclado >= 250):
+            #     print(*componentes)
+            #     break
 
-            print(linea)
+            # print(linea)
             for tipoComponente, regex in self.descriptoresComponentes:
 
                 respuesta = re.match(regex, linea)
@@ -81,26 +79,32 @@ class Explorador:
                     
                 nuevoComponente = ComponenteLexico(respuesta.group(), tipoComponente, numeroLinea, respuesta.start, linea)
 
+                # Si no identifico ningun patron y la linea no esta vacia es un error
+                # Deja de explorar la linea actual y sigue con la siguiente para buscar mas errores
+                # Debe ir antes ya que no es un comentario ni blancos
+                if tipoComponente is TipoComponenteLexico.NO_IDENTIFICADO:
+                    self.errores.append(nuevoComponente)
+                    return componentes
+                
 
                 # Si se encuentra algo diferente a un comentario o espacios agrega el componente lexico
                 if tipoComponente is not TipoComponenteLexico.COMENTARIO and tipoComponente is not TipoComponenteLexico.BLANCOS:
                     componentes.append(nuevoComponente)
 
-                # Si no identifico ningun patron y la linea no esta vacia es un error
-                # Deja de explorar la linea actual y sigue con la siguiente para buscar mas errores
-                if tipoComponente is TipoComponenteLexico.NO_IDENTIFICADO:
-                    self.errores.append(nuevoComponente)
-                    return componentes
 
                 linea = linea[respuesta.end():]
                 break
+        
+        # print(*componentes)
+        for componente in componentes :
+            print(componente.toString())
 
         return componentes
     
     def __imprimirComponentes(self):
         # Imprime los componentes
         for componente in self.componentes:
-            print(componente)
+            print(componente.toString())
 
     def __imprimirErrores(self):
         # Imprime los errores usando la representacion de componente de error de string
