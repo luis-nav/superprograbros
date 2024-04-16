@@ -1,13 +1,11 @@
 import re
-import sys
-import os
 
 from ComponenteLexico import ComponenteLexico, TipoComponenteLexico
 
 
 class Explorador:
 
-    descriptoresComponentes = descriptoresComponentes = [ 
+    descriptoresComponentes = [ 
         (TipoComponenteLexico.COMENTARIO, r'^(\[ ! \]).*'),
             (TipoComponenteLexico.ASIGNADOR, r'(\[ \? \])'),
             (TipoComponenteLexico.PRINCIPAL, r'^(juego)'),
@@ -19,15 +17,14 @@ class Explorador:
             (TipoComponenteLexico.RETORNO, r'^(bandera)'), 
             (TipoComponenteLexico.ENTERO, r'(-?[0-9]+)'),
             (TipoComponenteLexico.FLOTANTE, r'(-?[0-9]+\.[0-9]+)'),
-            (TipoComponenteLexico.TEXTO, r'\"[^\"]*\"'), # CORRECION
+            (TipoComponenteLexico.TEXTO, r'\"[^\"]*\"'),
             (TipoComponenteLexico.VALOR_BOOLEANO, r'(peach|bowser)'),
-            (TipoComponenteLexico.COMPARADOR, r'\[ (<>|><|>-|<-|\^\^|--) \]'), # CORRECCION
-            (TipoComponenteLexico.OPERADOR_BOOLEANO, r'\[ (&|\|) \]'), # backslash para usar el simbolo |
-            (TipoComponenteLexico.FIN_INSTRUCCION, r'\[ ; \]'), # falta implementar fin de linea
-            (TipoComponenteLexico.PUNTUACION, r'\[|\]|\(|\)|\{|\}|\,'), # CORRECCION
+            (TipoComponenteLexico.COMPARADOR, r'\[ (<>|><|>-|<-|\^\^|--) \]'),
+            (TipoComponenteLexico.OPERADOR_BOOLEANO, r'\[ (&|\|) \]'),
+            (TipoComponenteLexico.FIN_INSTRUCCION, r'\[ ; \]'), 
+            (TipoComponenteLexico.PUNTUACION, r'\[|\]|\(|\)|\{|\}|\,'),
             (TipoComponenteLexico.IDENTIFICADOR, r'[a-zA-Z][a-zA-Z0-9]*'),
             (TipoComponenteLexico.BLANCOS, r'(\s)+'),
-            
             (TipoComponenteLexico.NO_IDENTIFICADO, r'.*')]
 
 
@@ -58,26 +55,19 @@ class Explorador:
         # Procesa la linea N veces comparandola con los tipos de componentes lexicos.
         # En caso de que algun componente lexico no sea identificado lo annade a los errores y salta a la siguiente linea
         # Ignora comentarios y espacios en blanco.
-        enciclado = 0
+        lineaCompleta = linea
         componentes = []
     
         while (linea != ""):
-            #Prueba para terminar enciclado
-            # enciclado+= 1
-            # if(enciclado >= 250):
-            #     print(*componentes)
-            #     break
 
-            # print(linea)
             for tipoComponente, regex in self.descriptoresComponentes:
 
                 respuesta = re.match(regex, linea)
 
                 if respuesta == None:
                     continue
-                    
-                    
-                nuevoComponente = ComponenteLexico(respuesta.group(), tipoComponente, numeroLinea, respuesta.start, linea)
+
+                nuevoComponente = ComponenteLexico(respuesta.group(), tipoComponente, numeroLinea, lineaCompleta.find(respuesta.group()), lineaCompleta)
 
                 # Si no identifico ningun patron y la linea no esta vacia es un error
                 # Deja de explorar la linea actual y sigue con la siguiente para buscar mas errores
@@ -94,10 +84,6 @@ class Explorador:
 
                 linea = linea[respuesta.end():]
                 break
-        
-        # print(*componentes)
-        # for componente in componentes :
-        #     print(componente.toString())
 
         return componentes
     
