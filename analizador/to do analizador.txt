@@ -1,5 +1,6 @@
-crear la clase del ASA en utils
+
 crear clase Analizador
+	(Vicky)
 	func analizar
 	func analizar_programa 
 	func analizar_asignacion
@@ -9,6 +10,8 @@ crear clase Analizador
 	func analizar_funcion
 	func analizar_func_parametros
 	func analizar_func_parametros_invocacion
+	
+	(John)
 	func analizar_instruccion	
 	func analizar_repeticion
 	func analizar_bifurcacion
@@ -19,6 +22,8 @@ crear clase Analizador
 	func analizar_juego 
 	
 	func analizar_valor
+	
+	(Hytan)
 	func analizar_operador
 	func analizar_literal
 	func analizar_numero
@@ -29,6 +34,8 @@ crear clase Analizador
 	func verificar_valor_verdad
 	func verificar_comparador
 	func verificar_texto
+	
+	(Todd)
 	func verificar_entero
 	func verificar_flotante
 	func verificar_identificador
@@ -37,3 +44,5 @@ crear clase Analizador
 
 	func pasar_siguiente_componente
 	func siguiente_componente
+	crear la clase del ASA en utils
+
