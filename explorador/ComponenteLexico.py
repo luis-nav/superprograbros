@@ -25,6 +25,8 @@ class TipoComponenteLexico(Enum):
     FIN_INSTRUCCION = auto()
     NO_IDENTIFICADO = auto()
 
+    COMPARACION = auto()  # Falta por agregar
+
 
 class ComponenteLexico:
     def __init__(self, lexema, tipo, numeroLinea, numeroColumna, lineaCodigo):
