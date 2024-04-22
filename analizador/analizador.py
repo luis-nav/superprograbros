@@ -76,6 +76,7 @@ class Analizador:
     cantidadComponentes: int
     posicionComponenteActual: int
     componenteActual : ComponenteLexico
+    error : bool
 
     # constructor
     def __init__(self, listaComponentes):
@@ -84,8 +85,8 @@ class Analizador:
         self.cantidadComponentes = len(listaComponentes)
         self.posicionComponenteActual = 0
         self.componenteActual = listaComponentes[self.posicionComponenteActual]
-
-        self.asa = ArbolSintaxisAbstracta() # falta definir la estructura del arbol
+        self.asa = ArbolSintaxisAbstracta()
+        self.error = False
 
 
     # metodos
@@ -258,7 +259,7 @@ class Analizador:
         self.verificarTipoComponente(TipoComponenteLexico.OPERADOR_BOOLEANO)
 
         nodo = NodoASA(TipoComponenteLexico.OPERADOR_BOOLEANO, contenido=self.componenteActual.lexema)
-        self.pasarSiguienteComponente()
+        self.__pasarSiguienteComponente()
 
         return nodo
 
@@ -307,6 +308,65 @@ class Analizador:
 
         return NodoASA(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
 
+    def __verificarFlotante(self):
+        """
+        Verifica si el tipo del componente léxico actual es un entero
+
+        Flotante ::= (-)?\d*.\d+
+        """
+        self.__verificar_tipo_componente(TipoComponenteLexico.FLOTANTE)
+
+        nodo = NodoASA(TipoComponenteLexico.FLOTANTE, contenido =self.componente_actual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+    
+    def __verificarEntero(self):
+        """
+        Verifica si el tipo del componente léxico actual es un entero
+
+        Entero ::= (-)?\d+
+        """
+        self.__verificar_tipo_componente(TipoComponenteLexico.ENTERO)
+
+        nodo = NodoASA(TipoComponenteLexico.ENTERO, contenido =self.componente_actual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+    
+    def __verificarIdentificador(self):
+        """
+        Verifica si el tipo del componente léxico actual es un identificador
+
+        Identificador ::= [a-zA-Z_][0-9a-zA-Z_]*
+        """
+        self.__verificar_tipo_componente(TipoComponenteLexico.IDENTIFICADOR)
+
+        nodo = NodoASA(TipoComponenteLexico.IDENTIFICADOR, contenido =self.componente_actual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+
+    
+    def __verificar(self, textoEsperado):
+        """
+        Verifica si el texto del componente actual es el del texto esperado que se envia como parametro.
+        Si no coinciden se imprime el error y se activa la bandera de error
+        """
+
+        if self.componenteActual.lexema != textoEsperado:
+            print(f"[Error]: Se esperaba '{textoEsperado}', no '{self.componenteActual.lexema}' en la linea {self.componenteActual.numeroLinea}, columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n")
+            self.error = True
+
+        self.__pasarSiguienteComponente()
+
+    def __verificarTipoComponente(self, tipoEsperado ):
+        """
+        Verifica un componente segun su tipo
+        """
+
+        if self.componente_actual.tipo != tipoEsperado:
+            print(f"[Error]: Se esperaba un token de tipo '{tipoEsperado}', no '{self.componenteActual.tipo}' en la linea {self.componenteActual.numeroLinea}, columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n")
+            self.error = True
+
+    
     def __pasarSiguienteComponente(self):
         """
         Pasa al siguiente componente léxico

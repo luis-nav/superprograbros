@@ -38,11 +38,11 @@ crear clase Analizador
 	(Todd)
 	func verificar_entero
 	func verificar_flotante
-	func verificar_identificador
-	func verificar
-	func verificar_tipo_componente
+	*func verificar_identificador
+	*func verificar
+	*func verificar_tipo_componente
 
-	func pasar_siguiente_componente
-	func siguiente_componente
+	*func pasar_siguiente_componente
+	*func siguiente_componente -> Esta funcion no se tiene que/puede hacer
 	*crear la clase del ASA en utils
 
