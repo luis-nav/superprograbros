@@ -309,6 +309,18 @@ class Analizador:
 
         return NodoASA(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
 
+    def __analizarValor(self):
+        """
+        Valor ::= (Literal | Identificador)
+        """
+        if self.componenteActual.tipo == TipoComponenteLexico.IDENTIFICADOR :
+            nodo = self.__verificarIdentificador()
+        else: 
+            nodo = self.__verificarLiteral()
+        
+        return nodo
+
+
     def __verificarFlotante(self):
         """
         Verifica si el tipo del componente léxico actual es un entero
