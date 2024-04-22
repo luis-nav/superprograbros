@@ -2,7 +2,7 @@
 
 Transpilador para el lenguaje SuperPrograBros
 
-##Guía de uso:
+## Guía de uso:
 positional arguments:
   archivo           Archivo de código fuente
 
