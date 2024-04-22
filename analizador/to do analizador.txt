@@ -36,8 +36,8 @@ crear clase Analizador
 	func verificar_texto
 	
 	(Todd)
-	func verificar_entero
-	func verificar_flotante
+	*func verificar_entero
+	*func verificar_flotante
 	*func verificar_identificador
 	*func verificar
 	*func verificar_tipo_componente

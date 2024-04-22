@@ -142,10 +142,10 @@ class Analizador:
         nuevosNodos = []
 
         # analisis de la condicion
-        self.verificar('minijuego')
-        self.verificar('[')
+        self.__verificar('minijuego')
+        self.__verificar('[')
         nuevosNodos += [self.analizarCondicion()]
-        self.verificar(']')
+        self.__verificar(']')
 
         nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
 
@@ -177,10 +177,10 @@ class Analizador:
         nuevosNodos = []
 
         # analizar Si
-        self.verificar('nivel')
-        self.verificar('[')
+        self.__verificar('nivel')
+        self.__verificar('[')
         nuevosNodos += [self.analizarCondicion()]
-        self.verificar(']')
+        self.__verificar(']')
 
         nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
 
@@ -194,7 +194,7 @@ class Analizador:
         nuevosNodos = []
 
         # analizar Sino
-        self.verificar('tubo')
+        self.__verificar('tubo')
 
         nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
 
@@ -207,7 +207,7 @@ class Analizador:
         nuevosNodos = []
 
         # analizar retorno
-        self.verificar('bandera')
+        self.__verificar('bandera')
         
         # valor es opcional
         if self.componenteActual.tipo in [TipoComponenteLexico.IDENTIFICADOR, TipoComponenteLexico.ENTERO, TipoComponenteLexico.FLOTANTE,
@@ -256,7 +256,7 @@ class Analizador:
         """
         # analizar operador booleano 
 
-        self.verificarTipoComponente(TipoComponenteLexico.OPERADOR_BOOLEANO)
+        self.__verificarTipoComponente(TipoComponenteLexico.OPERADOR_BOOLEANO)
 
         nodo = NodoASA(TipoComponenteLexico.OPERADOR_BOOLEANO, contenido=self.componenteActual.lexema)
         self.__pasarSiguienteComponente()
@@ -282,7 +282,7 @@ class Analizador:
         """
         nuevosNodos = []
 
-        self.verificar('juego')
+        self.__verificar('juego')
         nuevosNodos += [self.analizarBloqueCodigo]
 
         return NodoASA(TipoComponenteLexico.PRINCIPAL, nodos=nuevosNodos)
@@ -292,7 +292,7 @@ class Analizador:
         BloqueCodigo ::= { Instrucción+ }
         """
          # Obligatorio
-        self.verificar('{')
+        self.__verificar('{')
 
         # la primera instruccion obligatoria
         nuevosNodos += [self.analizarInstruccion()]
@@ -304,7 +304,7 @@ class Analizador:
             nuevosNodos += [self.analizarInstruccion()]
 
         # Obligatorio
-        self.verificar('}')
+        self.__verificar('}')
 
         return NodoASA(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
 
