@@ -2,6 +2,9 @@
 
 #imports
 from explorador.explorador import TipoComponenteLexico, ComponenteLexico
+
+# 
+
 # clase de analizador, recibe la lista de componentes lexicos del explorador
 
 class Analizador:

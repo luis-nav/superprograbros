@@ -4,6 +4,7 @@ from analizador.analizador import Analizador
 
 import argparse
 
+# argparse config
 parser = argparse.ArgumentParser(description='Transpilador para el lenguaje SuperPrograBros')
 
 parser.add_argument('--solo-explorar', dest='explorador', action='store_true', 
@@ -23,6 +24,9 @@ parser.add_argument('archivo',
         help='Archivo de código fuente')
 
 def SuperPrograBros():
+    """
+    Funcion que se encarga de correr el transpilador de spb segun las configuraciones dadas en los args del programa
+    """
     args = parser.parse_args()
 
     if args.explorador == True:

@@ -1,6 +1,6 @@
 import re
 
-from ComponenteLexico import ComponenteLexico, TipoComponenteLexico
+from explorador.ComponenteLexico import ComponenteLexico, TipoComponenteLexico
 
 
 class Explorador:
