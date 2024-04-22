@@ -98,7 +98,7 @@ class Analizador:
             self.asa.imprimirPreorden()
 
     
-    def analizarInstruccion(self):
+    def __analizarInstruccion(self):
         """
         Instrucción ::= (Repetición | Bifurcación | Asignación | Retorno |
         Error | Comentario)[ ; ](\n|\s)*
@@ -109,50 +109,50 @@ class Analizador:
 
         #repeticion
         if self.componenteActual.lexema == 'minijuego':
-            nuevosNodos += [self.analizarRepeticion()]
+            nuevosNodos += [self.__analizarRepeticion()]
         
         #bifurcacion    
         elif self.componenteActual.lexema == 'nivel':
-            nuevosNodos += [self.analizarBifurcacion()]
+            nuevosNodos += [self.__analizarBifurcacion()]
 
         # asignacion
         elif self.componenteActual.tipo == TipoComponenteLexico.IDENTIFICADOR:
-            nuevosNodos += [self.analizarAsignacion()]
+            nuevosNodos += [self.__analizarAsignacion()]
 
         #invocacion
         elif self.componenteActual.lexema == 'ir a mundo':
-            nuevosNodos += [self.analizarInvocacion()]
+            nuevosNodos += [self.__analizarInvocacion()]
 
         # retorno
         elif self.componenteActual.lexema == 'bandera':
-            nuevosNodos += [self.analizarRetorno()]
+            nuevosNodos += [self.__analizarRetorno()]
 
         #error
         else:
-            nuevosNodos += [self.analizarError()]
+            nuevosNodos += [self.__analizarError()]
             
 
         return NodoASA(TipoComponenteLexico.INSTRUCCION, nodos=nuevosNodos)
     
 
-    def analizarRepeticion(self):
+    def __analizarRepeticion(self):
         """
         minijuego [Condicion] {Instruccion+}
         """
         nuevosNodos = []
 
         # analisis de la condicion
-        self.__verificar('minijuego')
-        self.__verificar('[')
-        nuevosNodos += [self.analizarCondicion()]
-        self.__verificar(']')
+        self.verificar('minijuego')
+        self.verificar('[')
+        nuevosNodos += [self.__analizarCondicion()]
+        self.verificar(']')
 
-        nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
+        nuevosNodos += [self.__analizarBloqueCodigo()] #agregar nuevo
 
         return NodoASA(TipoComponenteLexico.REPETICION, nodos=nuevosNodos)
     
 
-    def analizarBifurcacion(self):
+    def __analizarBifurcacion(self):
         """
         Si (Sino)?
         """
@@ -160,34 +160,34 @@ class Analizador:
 
         # analisis de la bifurcacion
         # Si
-        nuevosNodos += [self.analizarSi()] #agregar nuevo
+        nuevosNodos += [self.__analizarSi()] #agregar nuevo
 
         # Sino
         if self.componenteActual.lexema == 'tubo':
-            nuevosNodos += [self.analizarSino()] #agregar nuevo
+            nuevosNodos += [self.__analizarSino()] #agregar nuevo
 
 
         return NodoASA(TipoComponenteLexico.SI, nodos=nuevosNodos)
     
 
-    def analizarSi(self):
+    def __analizarSi(self):
         """
         nivel (\n|\s)*[Condición](\n|\s)*{ Instrucción + }
         """
         nuevosNodos = []
 
         # analizar Si
-        self.__verificar('nivel')
-        self.__verificar('[')
-        nuevosNodos += [self.analizarCondicion()]
-        self.__verificar(']')
+        self.verificar('nivel')
+        self.verificar('[')
+        nuevosNodos += [self.__analizarCondicion()]
+        self.verificar(']')
 
-        nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
+        nuevosNodos += [self.__analizarBloqueCodigo()] #agregar nuevo
 
         return NodoASA(TipoComponenteLexico.SI, nodos=nuevosNodos)
     
 
-    def analizarSino(self):
+    def __analizarSino(self):
         """
         tubo (\n|\s)*{ Instrucción + }
         """
@@ -196,11 +196,11 @@ class Analizador:
         # analizar Sino
         self.__verificar('tubo')
 
-        nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
+        nuevosNodos += [self.__analizarBloqueCodigo()] #agregar nuevo
 
         return NodoASA(TipoComponenteLexico.SI, nodos=nuevosNodos)
 
-    def analizarRetorno(self):
+    def __analizarRetorno(self):
         """
         Retorno ::= bandera Valor?
         """
@@ -212,45 +212,45 @@ class Analizador:
         # valor es opcional
         if self.componenteActual.tipo in [TipoComponenteLexico.IDENTIFICADOR, TipoComponenteLexico.ENTERO, TipoComponenteLexico.FLOTANTE,
                                           TipoComponenteLexico.TEXTO, TipoComponenteLexico.VALOR_BOOLEANO]:
-            nuevosNodos += [self.analizarValor()]
+            nuevosNodos += [self.__analizarValor()]
 
         return NodoASA(TipoComponenteLexico.RETORNO, nodos=nuevosNodos)
     
 
-    def analizarCondicion(self):
+    def __analizarCondicion(self):
         """
-        Condición ::= Comparación (( [ & ] | [ | ]) Condición)?
+        Condición ::= Comparación (OperadorBooleano Condición)?
         """
         nuevosNodos = []
 
         # se analiza la primera comparacion
-        nuevosNodos += [self.analizarComparacion()]
+        nuevosNodos += [self.__analizarComparacion()]
 
         # la segunda comparacion con los operadores es opcional
         if self.componenteActual.tipo == TipoComponenteLexico.OPERADOR_LOGIO:
-            nuevosNodos = [self.analizarOperadorBooleano()]
+            nuevosNodos = [self.__analizarOperadorBooleano()]
 
             # analizar la siguiente condicion 
-            nuevosNodos = [self.analizarCondicion()]
+            nuevosNodos = [self.__analizarCondicion()]
 
 
         return NodoASA(TipoComponenteLexico.CONDICION, nodos=nuevosNodos)
     
-    def analizarComparacion(self):
+    def __analizarComparacion(self):
         """
         Comparación ::= Valor Comparador Valor
         """
         nuevosNodos = []
 
         # analisis de la comparacion
-        nuevosNodos += [self.analizarValor()]
-        nuevosNodos += [self.verificarComparador()]
-        nuevosNodos += [self.analizarValor()]
+        nuevosNodos += [self.__analizarValor()]
+        nuevosNodos += [self.__verificarComparador()]
+        nuevosNodos += [self.__analizarValor()]
 
 
         return NodoASA(TipoComponenteLexico.COMPARACION, nodos=nuevosNodos)
     
-    def analizarOperadorBooleano(self):
+    def __analizarOperadorBooleano(self):
         """
         ComparadorLogico ::=  [( & | | )]
         """
@@ -264,19 +264,19 @@ class Analizador:
         return nodo
 
 
-    def analizarError(self):
+    def __analizarError(self):
         """
         Error ::= [ POW ] Valor 
         """
         nuevosNodos = []
 
         self.__verificar('[ POW ]')
-        nuevosNodos += [self.analizarValor()]
+        nuevosNodos += [self.__analizarValor()]
 
         return NodoASA(TipoComponenteLexico.ERROR, nodos=nuevosNodos)
     
 
-    def analizarPrincipal(self):
+    def __analizarPrincipal(self):
         """
         Principal :== juego (\n|\s)*{Instrucción *}
         """
@@ -287,21 +287,22 @@ class Analizador:
 
         return NodoASA(TipoComponenteLexico.PRINCIPAL, nodos=nuevosNodos)
     
-    def analizarBloqueCodigo(self):
+    def __analizarBloqueCodigo(self):
         """
         BloqueCodigo ::= { Instrucción+ }
         """
-         # Obligatorio
-        self.__verificar('{')
+        nuevosNodos = []
+        # Obligatorio
+        self.verificar('{')
 
         # la primera instruccion obligatoria
-        nuevosNodos += [self.analizarInstruccion()]
+        nuevosNodos += [self.__analizarInstruccion()]
 
         # valida todas las instrucciones que haya de mas (repeticion, bifurcacion, retorno, invocacion, error)
         while self.componenteActual.lexema in ['minijuego', 'nivel', 'bandera', 'ir a mundo', '[ POW ]'] \
                 or self.componenteActual.tipo == TipoComponenteLexico.IDENTIFICADOR:
         
-            nuevosNodos += [self.analizarInstruccion()]
+            nuevosNodos += [self.__analizarInstruccion()]
 
         # Obligatorio
         self.__verificar('}')

@@ -1,0 +1,94 @@
+
+[ ! ] Retorna peach/bowser si el caracter dado es una consonante
+mundo esConsonante [caracter] {
+    consonantes [ ? ] "bcdfghjklmnpqrstvwxyz" [ ; ]
+    [ ! ] Son 21
+    cantCons [ ? ] ir a mundo puntuacion[consonantes] [ ; ]
+    indice [ ? ] 0 [ ; ]
+
+    minijuego [indice [ -- ] cantCons] {
+        consonanteActual [ ? ] ir a mundo moneda[consonantes, indice] [ ; ]
+        nivel [consonanteActual  [ <> ] caracter] {
+            bandera peach [ ; ]
+        }
+        indice [ ? ] indice [ + ] 1 [ ; ]
+    }
+    
+    bandera bowser [ ; ]
+}
+
+[ ! ] Esta funciona retorna la cantidad de consonantes que hay en una palabra dada
+mundo cantidadConsonantes [palabra] {
+    largoPalabra [ ? ] puntuacion[palabra] [ ; ]
+    indice [ ? ] 0 [ ; ]
+    contador [ ? ] 0 [ ; ]
+    minijuego [indice [ -- ] largoPalabra] {
+        char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
+        lowerChar [ ? ] ir a mundo daisy[char] [ ; ]
+        nivel (ir a mundo esConsonante[lowerChar] [ <> ] peach) {
+            contador [ ? ] contador [ + ] 1 [ ; ]
+        }
+        indice [ ? ] indice [ + ] 1 [ ; ]
+    }
+    bandera contador [ ; ]
+}
+
+
+[ ! ] Suma de digitos pares de un numero dado
+mundo sumaDigitosPares [numero] {
+    suma [ ? ] 0 [ ; ]
+
+    minijuego [numero [^^] 0 ]{
+        digitoActual [ ? ] ir a mundo florFuego[numero, 10] [ ; ]
+        parDigito [ ? ] ir a mundo florFuego[digitoActual, 2] [ ; ]
+
+        nivel (parDigito [ <> ] 0){
+            suma [ ? ] suma [ + ] digitoActual [ ; ]
+        }
+        numero [ ? ] yoshi[ numero [ / ] 10 ] [ ; ]
+    }
+
+    bandera suma [ ; ]
+}
+
+
+[ ! ] Multiplicacion de los digitos de un numero dado
+mundo multiDigitos [numero] {
+    resultado [ ? ] 0 [ ; ]
+
+    minijuego [numero [^^] 0 ]{
+        digitoActual [ ? ] ir a mundo florFuego[numero, 10] [ ; ]
+
+        resultado [ ? ] resultado [ * ] digitoActual [ ; ]
+
+        numero [ ? ] yoshi[ numero [ / ] 10 ] [ ; ]
+    }
+
+    bandera suma [ ; ]
+}
+
+
+[ ! ] Calcula la secuencia de fibonacchi de un numero dado, recibe un numero mayor o igual a cero
+mundo fibo[n]{
+    
+    nivel (n [ <> ] 0 ){
+        bandera 0 [ ; ]
+    }
+
+    nivel (n [ <> ] 1){
+        bandera 1 [ ; ]
+    }tubo {
+        a [ ? ] 0 [ ; ]
+        b [ ? ] 1 [ ; ]
+        index [ ? ] 2 [ ; ]
+        aux [ ? ] 0 [ ; ]
+        minijuego [index [ <- ] n ]{
+            aux [ ? ] a [ ; ]
+            a [ ? ] b [ ; ]
+            b [ ? ] aux [ + ] b [ ; ]
+
+            index [ ? ] index [ + ] 1 [ ; ]
+        }
+        bandera b [ ; ]
+    }
+}
