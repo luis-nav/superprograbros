@@ -3,7 +3,70 @@
 #imports
 from explorador.explorador import TipoComponenteLexico, ComponenteLexico
 
-# 
+class NodoASA:
+    """
+    Clase que representa un nodo generico del ASA.
+    Cada nodo puede tener n nodos hijos y tiene su componente lexico con la informacion de error
+    """
+    tipo : TipoComponenteLexico
+    contenido : str
+    errorInfo : dict
+    hijos : list
+
+    def __init__(self, tipo, contenido = None, nodos = [], errorInfo = {}):
+        self.tipo = tipo
+        self.contenido = contenido
+        self.nodos = nodos
+        self.errorInfo = errorInfo
+
+    def visitar(self, visitador):
+        return visitador.visitar(self)
+    
+    def __str__(self):
+
+        # Coloca la información del nodo
+        resultado = '{:30}\t'.format(self.tipo)
+        
+        if self.contenido is not None:
+            resultado += '{:10}\t'.format(self.contenido)
+        else:
+            resultado += '{:10}\t'.format('')
+
+
+        if self.errorInfo != {}:
+            resultado += '{:38}'.format(str(self.errorInfo))
+        else:
+            resultado += '{:38}\t'.format('')
+
+        if self.nodos != []:
+            resultado += '<'
+
+            # Imprime los tipos de los nodos del nivel siguiente
+            for nodo in self.nodos[:-1]:
+                if nodo is not None:
+                    resultado += '{},'.format(nodo.tipo)
+
+            resultado += '{}'.format(self.nodos[-1].tipo)
+            resultado += '>'
+
+        return resultado
+
+
+class ArbolSintaxisAbstracta:
+    """
+    Clase que representa el ASA. Guarda referencia a la raiz y imprime recursivamente los nodos
+    """
+    raiz : NodoASA
+
+    def imprimirPreorden(self):
+        self.__imprimirPreordenAux(self.raiz)
+
+    def __imprimirPreordenAux(self, nodo):
+        print(nodo)
+
+        if nodo is not None:
+            for nodoHijo in nodo.nodos:
+                self.__imprimirPreordenAux(nodoHijo)
 
 # clase de analizador, recibe la lista de componentes lexicos del explorador
 
@@ -68,7 +131,7 @@ class Analizador:
             nuevosNodos += [self.analizarError()]
             
 
-        return NodoArbol(TipoComponenteLexico.INSTRUCCION, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.INSTRUCCION, nodos=nuevosNodos)
     
 
     def analizarRepeticion(self):
@@ -85,7 +148,7 @@ class Analizador:
 
         nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
 
-        return NodoArbol(TipoComponenteLexico.REPETICION, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.REPETICION, nodos=nuevosNodos)
     
 
     def analizarBifurcacion(self):
@@ -103,7 +166,7 @@ class Analizador:
             nuevosNodos += [self.analizarSino()] #agregar nuevo
 
 
-        return NodoArbol(TipoComponenteLexico.SI, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.SI, nodos=nuevosNodos)
     
 
     def analizarSi(self):
@@ -120,7 +183,7 @@ class Analizador:
 
         nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
 
-        return NodoArbol(TipoComponenteLexico.SI, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.SI, nodos=nuevosNodos)
     
 
     def analizarSino(self):
@@ -134,7 +197,7 @@ class Analizador:
 
         nuevosNodos += [self.analizarBloqueCodigo()] #agregar nuevo
 
-        return NodoArbol(TipoComponenteLexico.SI, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.SI, nodos=nuevosNodos)
 
     def analizarRetorno(self):
         """
@@ -150,7 +213,7 @@ class Analizador:
                                           TipoComponenteLexico.TEXTO, TipoComponenteLexico.VALOR_BOOLEANO]:
             nuevosNodos += [self.analizarValor()]
 
-        return NodoArbol(TipoComponenteLexico.RETORNO, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.RETORNO, nodos=nuevosNodos)
     
 
     def analizarCondicion(self):
@@ -170,7 +233,7 @@ class Analizador:
             nuevosNodos = [self.analizarCondicion()]
 
 
-        return NodoArbol(TipoComponenteLexico.CONDICION, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.CONDICION, nodos=nuevosNodos)
     
     def analizarComparacion(self):
         """
@@ -184,7 +247,7 @@ class Analizador:
         nuevosNodos += [self.analizarValor()]
 
 
-        return NodoArbol(TipoComponenteLexico.COMPARACION, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.COMPARACION, nodos=nuevosNodos)
     
     def analizarOperadorBooleano(self):
         """
@@ -194,7 +257,7 @@ class Analizador:
 
         self.verificarTipoComponente(TipoComponenteLexico.OPERADOR_BOOLEANO)
 
-        nodo = NodoÁrbol(TipoComponenteLexico.OPERADOR_BOOLEANO, contenido=self.componenteActual.lexema)
+        nodo = NodoASA(TipoComponenteLexico.OPERADOR_BOOLEANO, contenido=self.componenteActual.lexema)
         self.pasarSiguienteComponente()
 
         return nodo
@@ -209,7 +272,7 @@ class Analizador:
         self.__verificar('[ POW ]')
         nuevosNodos += [self.analizarValor()]
 
-        return NodoArbol(TipoComponenteLexico.ERROR, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.ERROR, nodos=nuevosNodos)
     
 
     def analizarPrincipal(self):
@@ -221,7 +284,7 @@ class Analizador:
         self.verificar('juego')
         nuevosNodos += [self.analizarBloqueCodigo]
 
-        return NodoArbol(TipoComponenteLexico.PRINCIPAL, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.PRINCIPAL, nodos=nuevosNodos)
     
     def analizarBloqueCodigo(self):
         """
@@ -242,7 +305,7 @@ class Analizador:
         # Obligatorio
         self.verificar('}')
 
-        return NodoÁrbol(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
+        return NodoASA(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
 
 
     

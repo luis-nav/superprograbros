@@ -1,4 +1,4 @@
-from utils import cargar_archivo
+from utils import cargarArchivo
 from explorador.explorador import Explorador
 from analizador.analizador import Analizador
 
@@ -30,7 +30,7 @@ def SuperPrograBros():
     args = parser.parse_args()
 
     if args.explorador == True:
-        archivo = cargar_archivo(args.archivo)
+        archivo = cargarArchivo(args.archivo)
 
         explorador = Explorador(archivo)
         res_valida_explorador = explorador.explorar()
@@ -39,7 +39,7 @@ def SuperPrograBros():
         explorador.imprimirComponentes()
 
     elif args.analizador == True:
-        archivo = cargar_archivo(args.archivo)
+        archivo = cargarArchivo(args.archivo)
 
         explorador = Explorador(archivo)
         res_valida_explorador = explorador.explorar()

@@ -44,5 +44,5 @@ crear clase Analizador
 
 	func pasar_siguiente_componente
 	func siguiente_componente
-	crear la clase del ASA en utils
+	*crear la clase del ASA en utils
 

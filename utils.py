@@ -1,4 +1,4 @@
-def cargar_archivo(path):
+def cargarArchivo(path):
     """
     Carga un archivo
     """
