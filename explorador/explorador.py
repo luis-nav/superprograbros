@@ -47,9 +47,7 @@ class Explorador:
         if (len(self.errores) != 0):
             self.__imprimirErrores()
             return False
-        else:
-            self.__imprimirComponentes()
-            return True
+        return True
 
     def __procesarLinea(self, linea, numeroLinea):
         # Procesa la linea N veces comparandola con los tipos de componentes lexicos.
@@ -87,7 +85,7 @@ class Explorador:
 
         return componentes
     
-    def __imprimirComponentes(self):
+    def imprimirComponentes(self):
         # Imprime los componentes
         for componente in self.componentes:
             print(componente.toString())
