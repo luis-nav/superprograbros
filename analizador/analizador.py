@@ -72,7 +72,7 @@ class ArbolSintaxisAbstracta:
 
 class Analizador:
     # atributos
-    componenteLexicos : list
+    componentesLexicos : list
     cantidadComponentes: int
     posicionComponenteActual: int
     componenteActual : ComponenteLexico
@@ -80,7 +80,7 @@ class Analizador:
     # constructor
     def __init__(self, listaComponentes):
 
-        self.componenteLexicos = listaComponentes
+        self.componentesLexicos = listaComponentes
         self.cantidadComponentes = len(listaComponentes)
         self.posicionComponenteActual = 0
         self.componenteActual = listaComponentes[self.posicionComponenteActual]
@@ -307,5 +307,15 @@ class Analizador:
 
         return NodoASA(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
 
+    def __pasarSiguienteComponente(self):
+        """
+        Pasa al siguiente componente léxico
+        """
+        self.posicionComponenteActual += 1
+
+        if self.posicionComponenteActual >= self.cantidadComponentes:
+            return
+
+        self.componente_actual = self.componentesLexicos[self.posicionComponenteActual]
 
     
