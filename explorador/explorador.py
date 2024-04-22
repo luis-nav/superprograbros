@@ -33,9 +33,8 @@ class Explorador:
         self.archivo = archivo
         self.componentes = []
         self.errores = []
-        self.__explorar()
 
-    def __explorar(self):
+    def explorar(self):
         # Se encarga de recorrer todas las lineas del archivo y ejecutar la funcion procesarLinea
         # Al final, si encuentra errores, los imprime y devuelve false. En caso de exito, solo imprime los tokens
         counter = 1
