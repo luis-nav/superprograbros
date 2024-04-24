@@ -352,7 +352,7 @@ class Analizador:
         # Obligatorio
         self.__verificar('}')
 
-        return NodoASA(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
+        return "falta"
     
     def __verificarIdentificador(self):
         """
