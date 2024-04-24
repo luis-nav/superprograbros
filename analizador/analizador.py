@@ -332,9 +332,9 @@ class Analizador:
 
         return nodo
     
-    def __analizarBloqueCodigo(self):
+    def __analizarBloqueInstrucciones(self):
         """
-        BloqueCodigo ::= { Instrucción+ }
+        BloqueInstrucciones ::= { Instrucción+ }
         """
         nuevosNodos = []
         # Obligatorio
@@ -353,6 +353,18 @@ class Analizador:
         self.__verificar('}')
 
         return NodoASA(TipoComponenteLexico.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
+    
+    def __verificarIdentificador(self):
+        """
+        Verifica si el tipo del componente léxico actual es un identificador
+
+        Identificador ::= [a-zA-Z_][0-9a-zA-Z_]*
+        """
+        self.__verificarTipoComponente(TipoComponenteLexico.IDENTIFICADOR)
+
+        nodo = NodoASA(TipoComponenteLexico.IDENTIFICADOR, contenido=self.componenteActual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
 
     def __analizarValor(self):
         """
