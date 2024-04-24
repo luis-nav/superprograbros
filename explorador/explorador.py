@@ -13,7 +13,7 @@ class Explorador:
             (TipoComponenteLexico.OPERADOR, r'(\[ (\+|-|\*|\/|) \])'),
             (TipoComponenteLexico.INVOCACION, r'^(ir a mundo)'),
             (TipoComponenteLexico.REPETICION, r'^(minijuego)'),
-            (TipoComponenteLexico.SI, r'^(nivel|tubo)'), # se juntan el if con el else
+            (TipoComponenteLexico.BIFURCACION, r'^(nivel|tubo)'), # se juntan el if con el else
             (TipoComponenteLexico.RETORNO, r'^(bandera)'), 
             (TipoComponenteLexico.ENTERO, r'(-?[0-9]+)'),
             (TipoComponenteLexico.FLOTANTE, r'(-?[0-9]+\.[0-9]+)'),

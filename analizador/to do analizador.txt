@@ -26,7 +26,7 @@ crear clase Analizador
 	(Hytan)
 	func analizar_operador
 	func analizar_literal
-	func analizar_numero
+	func analizar_numero (no hace falta)
 	func analizar_bloque_instrucciones
 	func analizar_identificador
 
