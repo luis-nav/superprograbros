@@ -1,4 +1,4 @@
-[ ! ] Esta funciona retorna si un numero es divisible entre otro
+[ ! ]Esta funciona retorna si un numero es divisible entre otro
 mundo esDivisible [numero, divisor] {
     mod [ ? ] ir a mundo florFuego[numero, divisor] [ ; ]
     nivel [mod [ <> ] 0] {
@@ -8,77 +8,74 @@ mundo esDivisible [numero, divisor] {
         bandera bowser [ ; ]
     }
 }
+
+
+[ ! ] Esta funciona retorna si un anno es bisiesto
+mundo esBisiesto [anno] {
+    mod4 [ ? ] ir a mundo florFuego[anno, 4] [ ; ]
+    mod100[ ? ] ir a mundo florFuego[anno, 100] [ ; ]
+    mod400[ ? ] ir a mundo florFuego[anno, 400] [ ; ]
+    nivel [[mod4 [ <> ] 0 [ & ] mod100 [ >< ] 0] [ | ] [mod400 [ <> ] 0]] {
+        bandera peach [ ; ]
+    }
+    tubo {
+        bandera bowser [ ; ]
+    }
+}
 juego {
-    ir a mundo esDivisible [10, 2] [ ; ]
+    ir a mundo esBisiesto [2024] [ ; ]
+}
+ 
+ 
+[ ! ]Esta funciona retorna la sumatoria de un rango
+mundo sumatoriaRango [inicioRango, finRango] {
+    numActual [ ? ] inicioRango [ ; ]
+    sum [ ? ] 0 [ ; ]
+    minijuego [numActual [ <- ] finRango] {
+        sum [ ? ] sum [ + ] numActual [ ; ]
+        numActual [ ? ] numActual [ + ] 1 [ ; ]
+    }
+    bandera sum [ ; ]
+}
+juego {
+    ir a mundo sumatoriaRango [2, 7] [ ; ]
 }
 
 
-[ ! ] [ ! ] Esta funciona retorna si un anno es bisiesto
-[ ! ] mundo esBisiesto [anno] {
-[ ! ]     mod4 [ ? ] ir a mundo florFuego[anno, 4] [ ; ]
-[ ! ]     mod100[ ? ] ir a mundo florFuego[anno, 100] [ ; ]
-[ ! ]     mod400[ ? ] ir a mundo florFuego[anno, 400] [ ; ]
-[ ! ]     nivel [[mod4 [ <> ] 0 [ & ] mod100 [ >< ] 0] [ | ] [mod400 [ <> ] 0]] {
-[ ! ]         bandera peach [ ; ]
-[ ! ]     }
-[ ! ]     tubo {
-[ ! ]         bandera bowser [ ; ]
-[ ! ]     }
-[ ! ] }
-[ ! ] juego {
-[ ! ]     ir a mundo esBisiesto [2024] [ ; ]
-[ ! ] }
-[ ! ] 
-[ ! ] 
-[ ! ] [ ! ] Esta funciona retorna la sumatoria de un rango
-[ ! ] mundo sumatoriaRango [inicioRango, finRango] {
-[ ! ]     numActual [ ? ] inicioRango [ ; ]
-[ ! ]     sum [ ? ] 0 [ ; ]
-[ ! ]     minijuego [numActual [ <- ] finRango] {
-[ ! ]         sum [ ? ] sum [ + ] numActual [ ; ]
-[ ! ]         numActual [ ? ] numActual [ + ] 1 [ ; ]
-[ ! ]     }
-[ ! ]     bandera sum [ ; ]
-[ ! ] }
-[ ! ] juego {
-[ ! ]     ir a mundo sumatoriaRango [2, 7] [ ; ]
-[ ! ] }
-[ ! ] 
-[ ! ] 
-[ ! ] [ ! ] Esta funciona retorna la cantidad de vocales que hay en una palabra
-[ ! ] mundo cantidadVocales [palabra] {
-[ ! ]     largo [ ? ] puntuacion[palabra] [ ; ]
-[ ! ]     indice [ ? ] 0 [ ; ]
-[ ! ]     contador [ ? ] 0 [ ; ]
-[ ! ]     minijuego [indice [ -- ] largo] {
-[ ! ]         caracter [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
-[ ! ]         minus [ ? ] ir a mundo daisy[caracter] [ ; ]
-[ ! ]         nivel [minus [ <> ] "a" [ | ] minus [ <> ] "e" [ | ] minus [ <> ] "i" [ | ] minus [ <> ] "o" [ | ] minus [ <> ] "u"] {
-[ ! ]             contador [ ? ] contador [ + ] 1 [ ; ]
-[ ! ]         }
-[ ! ]         indice [ ? ] indice [ + ] 1 [ ; ]
-[ ! ]     }
-[ ! ]     bandera contador [ ; ]
-[ ! ] }
-[ ! ] juego {
-[ ! ]     ir a mundo cantidadVocales ["hola"] [ ; ]
-[ ! ] }
-[ ! ] 
-[ ! ] 
-[ ! ] [ ! ] Esta funciona retorna si una palabra contiene un caracter
-[ ! ] mundo contiene [palabra, caracter] {
-[ ! ]     largo [ ? ] ir a mundo puntuacion[palabra] [ ; ]
-[ ! ]     indice [ ? ] 0 [ ; ]
-[ ! ]     minijuego [indice [ -- ] largo] {
-[ ! ]         letra [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
-[ ! ]         nivel [letra  [ <> ] caracter] {
-[ ! ]             bandera peach [ ; ]
-[ ! ]         }
-[ ! ]         indice [ ? ] indice [ + ] 1 [ ; ]
-[ ! ]     }
-[ ! ]     
-[ ! ]     bandera bowser [ ; ]
-[ ! ] }
-[ ! ] juego {
-[ ! ]     ir a mundo contiene ["hola", "a"] [ ; ]
-[ ! ] }
+[ ! ]Esta funciona retorna la cantidad de vocales que hay en una palabra
+mundo cantidadVocales [palabra] {
+    largo [ ? ] puntuacion[palabra] [ ; ]
+    indice [ ? ] 0 [ ; ]
+    contador [ ? ] 0 [ ; ]
+    minijuego [indice [ -- ] largo] {
+        caracter [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
+        minus [ ? ] ir a mundo daisy[caracter] [ ; ]
+        nivel [minus [ <> ] "a" [ | ] minus [ <> ] "e" [ | ] minus [ <> ] "i" [ | ] minus [ <> ] "o" [ | ] minus [ <> ] "u"] {
+            contador [ ? ] contador [ + ] 1 [ ; ]
+        }
+        indice [ ? ] indice [ + ] 1 [ ; ]
+    }
+    bandera contador [ ; ]
+}
+juego {
+    ir a mundo cantidadVocales ["hola"] [ ; ]
+}
+
+
+[ ! ]Esta funciona retorna si una palabra contiene un caracter
+mundo contiene [palabra, caracter] {
+    largo [ ? ] ir a mundo puntuacion[palabra] [ ; ]
+    indice [ ? ] 0 [ ; ]
+    minijuego [indice [ -- ] largo] {
+        letra [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
+        nivel [letra  [ <> ] caracter] {
+            bandera peach [ ; ]
+        }
+        indice [ ? ] indice [ + ] 1 [ ; ]
+    }
+    
+    bandera bowser [ ; ]
+}
+juego {
+    ir a mundo contiene ["hola", "a"] [ ; ]
+}

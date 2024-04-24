@@ -61,8 +61,8 @@ class Analizador:
 
         # Error
         else:
-            nuevosNodos += [self.__analizarError()]
-
+            self.__printError('juego')
+            
         
         return NodoASA(TipoNodo.PROGRAMA, nodos=nuevosNodos)
     
@@ -90,8 +90,8 @@ class Analizador:
 
         # Error
         else:
-            print(f"""[Error]: Se esperaba 'Asignacion', no '{self.componenteActual.lexema}' en la linea {self.componenteActual.numeroLinea}, 
-                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n""")
+            self.__printError('Asignacion')
+
         self.__verificar("[ ; ]")
         return NodoASA(TipoNodo.ASIGNACION, nodos=nuevosNodos)
 
@@ -117,7 +117,7 @@ class Analizador:
 
         # Error
         else:
-            nuevosNodos += [self.__analizarError()]
+            self.__printError('Expresion Matematica')
 
         return NodoASA(TipoNodo.EXPRESION_MATEMATICA, nodos=nuevosNodos) ######
 
@@ -245,7 +245,7 @@ class Analizador:
 
             # Error
             elif self.componenteActual.tipo == TipoComponenteLexico.ERROR:
-                nuevosNodos += [self.__analizarError()]
+                self.__printError('Instruccion')
 
             self.__verificar('[ ; ]')
 
@@ -273,7 +273,7 @@ class Analizador:
         # analisis de la condicion
         self.__verificar('minijuego')
         self.__verificar('[')
-        nuevosNodos += [self.__analizarCondicion()]
+        nuevosNodos += [self.__analizarBloqueCondiciones()]
         self.__verificar(']')
 
         nuevosNodos += [self.__analizarBloqueInstrucciones()] #agregar nuevo
@@ -307,7 +307,7 @@ class Analizador:
         # analizar Si
         self.__verificar('nivel')
         self.__verificar('[')
-        nuevosNodos += [self.__analizarCondicion()]
+        nuevosNodos += [self.__analizarBloqueCondiciones()]
         self.__verificar(']')
 
         nuevosNodos += [self.__analizarBloqueInstrucciones()] #agregar nuevo
@@ -344,7 +344,35 @@ class Analizador:
 
         return NodoASA(TipoNodo.RETORNO, nodos=nuevosNodos)
     
+    def __analizarBloqueCondiciones(self):
+        """
+        BloqueCondiciones ::= Condicion | ([Condicion+] (OperadorBooleano BloqueCondiciones)?)
+        """
+        nuevosNodos = []
 
+        if self.componenteActual.lexema == '[':
+            # VIene bloque de condiciones
+            self.__verificar('[')
+            nuevosNodos += [self.__analizarCondicion()]
+
+            while self.componenteActual.lexema != ']':
+                nuevosNodos += [self.__analizarCondicion()]
+            
+            self.__verificar(']')
+
+            if self.componenteActual.tipo == TipoComponenteLexico.OPERADOR_BOOLEANO:
+                nuevosNodos = [self.__analizarOperadorBooleano()]
+
+                # analizar la siguiente condicion 
+                nuevosNodos = [self.__analizarBloqueCondiciones()]
+
+
+        else:
+            # viene una sola condicion 
+            nuevosNodos += [self.__analizarCondicion()]
+
+        return NodoASA(TipoNodo.BLOQUE_CONDICIONES, nodos=nuevosNodos)
+    
     def __analizarCondicion(self):
         """
         Condición ::= Comparación (OperadorBooleano Condición)?
@@ -359,7 +387,7 @@ class Analizador:
             nuevosNodos = [self.__analizarOperadorBooleano()]
 
             # analizar la siguiente condicion 
-            nuevosNodos = [self.__analizarCondicion()]
+            nuevosNodos = [self.__analizarBloqueCondiciones()]
 
 
         return NodoASA(TipoNodo.CONDICION, nodos=nuevosNodos)
@@ -418,6 +446,7 @@ class Analizador:
         """
         Literal ::= (Entero | Flotante | Texto | ValorBooleano)
         """
+
         if self.componenteActual.tipo == TipoComponenteLexico.ENTERO:
             nodo = self.__verificarEntero()
         elif self.componenteActual.tipo == TipoComponenteLexico.FLOTANTE:
@@ -428,6 +457,7 @@ class Analizador:
             nodo = self.__verificarValorBooleano()
         else:
             # Manejo de error
+            self.__printError("Literal")
             nodo = self.__analizarError()
 
         return nodo
@@ -586,9 +616,7 @@ class Analizador:
         """
 
         if self.componenteActual.lexema != textoEsperado:
-            print(f"""[Error]: Se esperaba '{textoEsperado}', no '{self.componenteActual.lexema}' en la linea {self.componenteActual.numeroLinea}, 
-                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n""")
-            self.error = True
+            self.__printError(textoEsperado)
 
         self.__pasarSiguienteComponente()
 
@@ -598,9 +626,7 @@ class Analizador:
         """
 
         if self.componenteActual.tipo != tipoEsperado:
-            print(f"""[Error]: Se esperaba un token de tipo '{tipoEsperado}', no '{self.componenteActual.tipo}' en la linea {self.componenteActual.numeroLinea}, 
-                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n""")
-            self.error = True
+            self.__printError(tipoEsperado)
 
     
     def __pasarSiguienteComponente(self):
@@ -613,3 +639,11 @@ class Analizador:
             return
 
         self.componenteActual = self.componentesLexicos[self.posicionComponenteActual]
+
+    def __printError(self, tipoNodoEsperado):
+        """
+        Imprime el error dado y coloca el error como true
+        """
+        print(f"""[ POW ]: Se esperaba un token de tipo '{tipoNodoEsperado}', no '{self.componenteActual.lexema}' en la linea {self.componenteActual.numeroLinea}, 
+                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n""")
+        self.error = True
