@@ -237,7 +237,6 @@ class Analizador:
 
             # Retorno
             if self.componenteActual.tipo == TipoComponenteLexico.RETORNO:
-                print("hey")
                 nuevosNodos += [self.__analizarRetorno()]
             
             # Invocacion
@@ -261,7 +260,6 @@ class Analizador:
         # asignacion
         elif self.componenteActual.tipo == TipoComponenteLexico.IDENTIFICADOR:
             nuevosNodos += [self.__analizarAsignacion()]
-
             
         return NodoASA(TipoNodo.INSTRUCCION, nodos=nuevosNodos)
     
@@ -441,7 +439,6 @@ class Analizador:
         nuevosNodos = []
         # Obligatorio
         self.__verificar('{')
-
         # la primera instruccion obligatoria
         nuevosNodos += [self.__analizarInstruccion()]
 
@@ -453,7 +450,6 @@ class Analizador:
         # Obligatorio
         self.__verificar('}')
         nodo = NodoASA(TipoNodo.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
-        self.__pasarSiguienteComponente()
         return nodo
     
     def __verificarIdentificador(self):
