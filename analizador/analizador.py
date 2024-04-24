@@ -97,7 +97,197 @@ class Analizador:
         else:
             self.asa.imprimirPreorden()
 
+    def analizar(self):
+        self.asa.raiz = self.__analizarPrograma()
     
+    def __analizarPrograma(self):
+        """
+        Programa ::= ((Comentario | Asignacion | Funcion)(\n|\s)*)* Principal
+        """
+
+        nuevosNodos = []
+        
+        while (True):
+
+            # Caso1: una asignación
+            if self.componenteActual.tipo == TipoComponenteLexico.IDENTIFICADOR:
+                nuevosNodos = [self.__analizarAsignacion()]
+
+            # Caso2: una función
+            elif self.componenteActual.tipo == TipoComponenteLexico.FUNCION:
+                nuevosNodos += [self.__analizarFuncion()]
+
+            else:
+                break
+
+        # El principal en esta posición es obligatorio
+        if self.componenteActual.tipo == TipoComponenteLexico.PRINCIPAL:
+            nuevosNodos += [self.__analizarPrincipal()]
+
+        # Error
+        else:
+            nuevosNodos += [self.__analizarError()]
+
+        
+        return NodoASA(TipoComponenteLexico.PROGRAMA, nodos=nuevosNodos)
+    
+    def __analizarAsignacion(self):
+        """
+        Asignación ::= Identificador [ ? ] (Literal | ExpresionMate | Invocación)
+        """
+
+        nuevosNodos = []
+
+        # El identificador en esta posición es obligatorio
+        nuevosNodos += [self.__verificarIdentificador()]
+
+        # El asignador en esta posición es obligatorio
+        nuevosNodos += [self.__verificarAsignador()]
+
+        # Caso1: una invocación
+        if self.componenteActual.tipo == TipoComponenteLexico.ASIGNADOR:
+            nuevosNodos += [self.__analizarInvocacion()]
+
+        # Caso2: un literal o una expresión matemática
+        elif self.componenteActual.tipo in [TipoComponenteLexico.ENTERO, TipoComponenteLexico.FLOTANTE, TipoComponenteLexico.TEXTO, 
+                                          TipoComponenteLexico.VALOR_BOOLEANO, TipoComponenteLexico.IDENTIFICADOR]:
+            if self.__componenteAdelante().tipo == TipoComponenteLexico.OPERADOR: 
+                nodos_nuevos += [self.__analizarExpresionMatematica()]
+            else:
+                nuevosNodos += [self.__analizarLiteral()]
+
+        # Error
+        else:
+            nuevosNodos += [self.__analizarError()]
+
+        return NodoASA(TipoComponenteLexico.ASIGNACION, nodos=nuevosNodos) #####
+
+
+    def __analizarExpresionMatematica(self):
+        """
+        ExpresionMate ::= Expresion | Valor
+        """
+
+        nuevosNodos = []
+        
+        # Caso1: una expresión
+        if self.componenteActual.tipo == TipoComponenteLexico.EXPRESION: ######
+            nuevosNodos += [self.__analizarExpresion()]
+
+        # Caso2: un valor
+        elif self.componenteActual.tipo in [TipoComponenteLexico.ENTERO, TipoComponenteLexico.FLOTANTE, TipoComponenteLexico.TEXTO, 
+                                            TipoComponenteLexico.VALOR_BOOLEANO, TipoComponenteLexico.IDENTIFICADOR]:
+            nuevosNodos += [self.__analizarValor()]
+
+        # Error
+        else:
+            nuevosNodos += [self.__analizarError()]
+
+        return NodoASA(TipoComponenteLexico.EXPRESION_MATEMATICA, nodos=nuevosNodos) ######
+
+
+    def __analizarExpresion(self):
+        """
+        Expresion ::= ExpresionMate Operador ExpresionMate
+        """
+
+        nuevosNodos = []
+
+        # Una expresión matemática en esta posición es obligatoria
+        nuevosNodos += [self.__analizarExpresionMatematica()]
+
+        # Un operador en esta posición es obligatorio
+        nuevosNodos += [self.__verificarOperador()]
+
+        # Una expresión matemática en esta posición es obligatoria
+        nuevosNodos += [self.__analizarExpresionMatematica()]
+
+        return NodoASA(TipoComponenteLexico.EXPRESIÓN , nodos=nuevosNodos)
+
+    def __analizarInvocacion(self):
+        """
+        Invocación ::= ir a mundo Identificador [Parámetros]
+        """
+        nuevosNodos = []
+
+        # El invocador en esta posición es obligatorio
+        nuevosNodos += [self.__verificarInvocador()]
+
+        # El identificador en esta posición es obligatorio
+        nuevosNodos += [self.__verificarIdentificador()]
+
+        # El [ en esta posición es obligatorio
+        self.__verificar('[')
+
+        # Los parámetros en esta posición son obligatorios
+        nuevosNodos += [self.__analizarParametrosInvocacion()]
+
+        # El ] en esta posición es obligatorio
+        self.__verificar(']')
+
+        return NodoASA(TipoComponenteLexico.INVOCACION , nodos=nuevosNodos)
+    
+    def __analizarFuncion(self):
+        """
+        Funcion ::= mundo Identificador [Parámetros](\n|\s)*{ Instrucción * }
+        """
+
+        nuevosNodos = []
+
+        # La palabra mundo en esta posición es obligatoria
+        self.__verificar('mundo')
+
+        # El identificador en esta posición es obligatorio
+        nuevosNodos += [self.__verificarIdentificador()]
+
+        # El [ en esta posición es obligatorio
+        self.__verificar('[')
+
+        nuevosNodos += [self.__analizarParametrosFuncion()]
+
+        # El ] en esta posición es obligatorio
+        self.__verificar(']')
+
+        # El bloque de código en esta posición es obligatoria
+        nuevosNodos += [self.__analizarBloqueCodigo()]
+
+        # La función lleva el nombre del identificador
+        return NodoASA(TipoComponenteLexico.FUNCION, \
+                contenido=nuevosNodos[0].contenido, nodos=nuevosNodos)
+    
+    def __analizarParametrosFuncion(self):
+        """
+        ParametrosFunción ::= Identificador (,Identificador)+
+        """
+        nodos_nuevos = []
+
+        # El identificador en esta posición es obligatorio
+        nodos_nuevos += [self.__verificarIdentificador()]
+
+        # Ciclo que verificar la ',' y el identificador hasta que se acaben los parámetros
+        while( self.componente_actual.texto == ','):
+            self.__verificar(',')
+            nodos_nuevos += [self.__verificarIdentificador()]
+
+        return NodoASA(TipoComponenteLexico.PARAMETROS_FUNCION , nodos=nodos_nuevos) #######
+
+    def __analizarParametrosInvocacion(self):
+        """
+        Parámetros Invocacion ::= Valor (,Valor)+
+        """
+        nuevosNodos = []
+
+        # El valor en esta posición es obligatorio
+        nuevosNodos += [self.__analizarValor()]
+
+        # Ciclo que verificar la ',' y el valor hasta que se acaben los parámetros
+        while(self.componenteActual.texto == ','):
+            self.__verificar(',')
+            nuevosNodos += [self.__analizarValor()]
+
+        return NodoASA(TipoComponenteLexico.PARAMETROS_INVOCACION , nodos=nuevosNodos) #######
+    
+
     def __analizarInstruccion(self):
         """
         Instrucción ::= (Repetición | Bifurcación | Asignación | Retorno |
@@ -457,12 +647,35 @@ class Analizador:
 
         Identificador ::= [a-zA-Z_][0-9a-zA-Z_]*
         """
-        self.__verificar_tipo_componente(TipoComponenteLexico.IDENTIFICADOR)
+        self.__verificarTipoComponente(TipoComponenteLexico.IDENTIFICADOR)
 
         nodo = NodoASA(TipoComponenteLexico.IDENTIFICADOR, contenido =self.componente_actual.lexema)
         self.__pasarSiguienteComponente()
         return nodo
+    
+    def __verificarAsignador(self):
+        """
+        Verifica si el tipo del componente léxico actual es un asignador
 
+        Asignador ::= \[ \? \]
+        """
+        self.__verificarTipoComponente(TipoComponenteLexico.ASIGNADOR)
+
+        nodo = NodoASA(TipoComponenteLexico.ASIGNADOR, contenido =self.componente_actual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+    
+    def __verificarInvocador(self):
+        """
+        Verifica si el tipo del componente léxico actual es un invocador
+
+        Asignador ::= (ir a mundo)
+        """
+        self.__verificarTipoComponente(TipoComponenteLexico.INVOCACION)
+
+        nodo = NodoASA(TipoComponenteLexico.INVOCACION, contenido =self.componente_actual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
     
     def __verificar(self, textoEsperado):
         """
@@ -497,4 +710,10 @@ class Analizador:
 
         self.componente_actual = self.componentesLexicos[self.posicionComponenteActual]
 
-    
+    def __componenteAdelante(self, avance=1):
+            """
+            Retorna el componente léxico que está 'avance' posiciones más
+            adelante... por default el siguiente. Esto sin adelantar el
+            contador del componente actual.
+            """
+            return self.componentesLexicos[self.posicionComponenteActual+avance]    
