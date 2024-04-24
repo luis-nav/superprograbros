@@ -661,8 +661,8 @@ class Analizador:
         """
 
         if self.componenteActual.lexema != textoEsperado:
-            print(f"[Error]: Se esperaba '{textoEsperado}', no '{self.componenteActual.lexema}' en la linea {self.componenteActual.numeroLinea}, 
-                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n")
+            print(f"""[Error]: Se esperaba '{textoEsperado}', no '{self.componenteActual.lexema}' en la linea {self.componenteActual.numeroLinea}, 
+                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n""")
             self.error = True
 
         self.__pasarSiguienteComponente()
@@ -673,8 +673,8 @@ class Analizador:
         """
 
         if self.componente_actual.tipo != tipoEsperado:
-            print(f"[Error]: Se esperaba un token de tipo '{tipoEsperado}', no '{self.componenteActual.tipo}' en la linea {self.componenteActual.numeroLinea}, 
-                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n")
+            print(f"""[Error]: Se esperaba un token de tipo '{tipoEsperado}', no '{self.componenteActual.tipo}' en la linea {self.componenteActual.numeroLinea}, 
+                  columna {self.componenteActual.numeroColumna}\n\n\t--->{self.componenteActual.lineaCodigo}\n""")
             self.error = True
 
     

@@ -46,6 +46,9 @@ def SuperPrograBros():
         if (not res_valida_explorador):
             return
         analizador = Analizador(explorador.componentes)
+        analizador.analizar()
+        if not analizador.error:
+            analizador.imprimirArbol()
 
     elif args.verificador == True:
         print("Error: No implementado")
