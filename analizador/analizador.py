@@ -262,8 +262,35 @@ class Analizador:
         self.__pasarSiguienteComponente()
 
         return nodo
+    
+    def __analizarOperador(self):
+            """
+            Operador ::= '(\[ (\+|-|\*|\/|) \])')
+            """
+            # analizar operador 
 
+            self.__verificarTipoComponente(TipoComponenteLexico.OPERADOR)
 
+            nodo = NodoASA(TipoComponenteLexico.OPERADOR, contenido=self.componenteActual.lexema)
+            self.__pasarSiguienteComponente()
+
+            return nodo
+
+    def __analizarNumero(self):
+        """
+        Numero ::= (Entero | Flotante)
+        """
+
+        if self.componenteActual.tipo == TipoComponenteLexico.ENTERO:
+            nodo = self.__verificarEntero()
+        elif self.componenteActual.tipo == TipoComponenteLexico.FLOTANTE:
+            nodo = self.__verificarFlotante()
+        else:
+            # Manejo de error
+            nodo = self.__analizarError()
+
+        return nodo
+    
     def __analizarError(self):
         """
         Error ::= [ POW ] Valor 
@@ -286,6 +313,24 @@ class Analizador:
         nuevosNodos += [self.analizarBloqueCodigo]
 
         return NodoASA(TipoComponenteLexico.PRINCIPAL, nodos=nuevosNodos)
+    
+    def __analizarLiteral(self):
+        """
+        Literal ::= (Entero | Flotante | Texto | ValorBooleano)
+        """
+        if self.componenteActual.tipo == TipoComponenteLexico.ENTERO:
+            nodo = self.__verificarEntero()
+        elif self.componenteActual.tipo == TipoComponenteLexico.FLOTANTE:
+            nodo = self.__verificarFlotante()
+        elif self.componenteActual.tipo == TipoComponenteLexico.TEXTO:
+            nodo = self.__verificarTexto()
+        elif self.componenteActual.tipo == TipoComponenteLexico.VALOR_BOOLEANO:
+            nodo = self.__verificarValorBooleano()
+        else:
+            # Manejo de error
+            nodo = self.__analizarError()
+
+        return nodo
     
     def __analizarBloqueCodigo(self):
         """
@@ -323,7 +368,7 @@ class Analizador:
 
     def __verificarFlotante(self):
         """
-        Verifica si el tipo del componente léxico actual es un entero
+        Verifica si el tipo del componente léxico actual es un flotante
 
         Flotante ::= (-)?\d*.\d+
         """
@@ -342,6 +387,55 @@ class Analizador:
         self.__verificar_tipo_componente(TipoComponenteLexico.ENTERO)
 
         nodo = NodoASA(TipoComponenteLexico.ENTERO, contenido =self.componente_actual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+    
+    def _verificarComparador(self):
+        """
+        Verifica si el tipo del componente léxico actual es un comparador
+        Comparador ::= Comparador ::= [ (<>|><|>-|<-|\^\^|--) \]')
+
+        """
+        self.__verificar_tipo_componente(TipoComponenteLexico.COMPARADOR)
+
+        nodo = NodoASA(TipoComponenteLexico.COMPARADOR, contenido =self.componente_actual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+
+    def __verificarValorBooleano(self):
+        """
+        Verifica si el tipo del componente léxico actual es un valor booleano
+
+        ValorBooleano ::= peach | bowser
+        """
+        self.__verificarTipoComponente(TipoComponenteLexico.VALOR_BOOLEANO)
+
+        nodo = NodoASA(TipoComponenteLexico.VALOR_BOOLEANO, contenido=self.componenteActual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+    
+    def __verificarOperador(self):
+        """
+        Verifica si el tipo del componente léxico actual es un operador
+
+        operador ::= '(\[ (\+|-|\*|\/|) \])')
+        """
+        self.__verificarTipoComponente(TipoComponenteLexico.OPERADOR)
+
+        nodo = NodoASA(TipoComponenteLexico.OPERADOR, contenido=self.componenteActual.lexema)
+        self.__pasarSiguienteComponente()
+        return nodo
+    
+    def __verificarTexto(self):
+        """
+        Verifica si el tipo del componente léxico actual es un texto
+
+        Texto ::= “[a-zA-Z_0-9]*”
+
+        """
+        self.__verificarTipoComponente(TipoComponenteLexico.TEXTO)
+
+        nodo = NodoASA(TipoComponenteLexico.TEXTO, contenido=self.componenteActual.lexema)  # Eliminar las comillas
         self.__pasarSiguienteComponente()
         return nodo
     
