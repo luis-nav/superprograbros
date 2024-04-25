@@ -28,24 +28,24 @@ mundo sumatoriaRango [inicioRango, finRango] {
     numActual [ ? ] inicioRango [ ; ]
     sum [ ? ] 0 [ ; ]
     minijuego [numActual [ <- ] finRango] {
-        sum [ ? ] sum [ + ] numActual [ ; ]
-        numActual [ ? ] numActual [ + ] 1 [ ; ]
+        sum [ ? ] [sum [ + ] numActual] [ ; ]
+        numActual [ ? ] [numActual [ + ] 1] [ ; ]
     }
     bandera sum [ ; ]
 }
 
 [ ! ]Esta funciona retorna la cantidad de vocales que hay en una palabra
 mundo cantidadVocales [palabra] {
-    largo [ ? ] puntuacion[palabra] [ ; ]
+    largo [ ? ] ir a mundo puntuacion[palabra] [ ; ]
     indice [ ? ] 0 [ ; ]
     contador [ ? ] 0 [ ; ]
     minijuego [indice [ -- ] largo] {
         caracter [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
         minus [ ? ] ir a mundo daisy[caracter] [ ; ]
         nivel [minus [ <> ] "a" [ | ] minus [ <> ] "e" [ | ] minus [ <> ] "i" [ | ] minus [ <> ] "o" [ | ] minus [ <> ] "u"] {
-            contador [ ? ] contador [ + ] 1 [ ; ]
+            contador [ ? ] [contador [ + ] 1] [ ; ]
         }
-        indice [ ? ] indice [ + ] 1 [ ; ]
+        indice [ ? ] [indice [ + ] 1] [ ; ]
     }
     bandera contador [ ; ]
 }
@@ -59,7 +59,7 @@ mundo contiene [palabra, caracter] {
         nivel [letra  [ <> ] caracter] {
             bandera peach [ ; ]
         }
-        indice [ ? ] indice [ + ] 1 [ ; ]
+        indice [ ? ] [indice [ + ] 1] [ ; ]
     }
     
     bandera bowser [ ; ]

@@ -41,6 +41,11 @@ class Analizador:
         """
 
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         
         while (True):
 
@@ -64,7 +69,7 @@ class Analizador:
             self.__printError('juego')
             
         
-        return NodoASA(TipoNodo.PROGRAMA, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.PROGRAMA, nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarAsignacion(self):
         """
@@ -72,6 +77,11 @@ class Analizador:
         """
 
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # El identificador en esta posición es obligatorio
         nuevosNodos += [self.__verificarIdentificador()]
@@ -93,7 +103,7 @@ class Analizador:
             self.__printError('Asignacion')
 
         self.__verificar("[ ; ]")
-        return NodoASA(TipoNodo.ASIGNACION, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.ASIGNACION, nodos=nuevosNodos, errorInfo=errorInfo)
 
 
     def __analizarExpresionMatematica(self):
@@ -102,6 +112,11 @@ class Analizador:
         """
 
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         
         # Caso1: un valor
         if self.componenteActual.tipo in [TipoComponenteLexico.ENTERO, TipoComponenteLexico.FLOTANTE, TipoComponenteLexico.TEXTO, 
@@ -119,7 +134,7 @@ class Analizador:
         else:
             self.__printError('Expresion Matematica')
 
-        return NodoASA(TipoNodo.EXPRESION_MATEMATICA, nodos=nuevosNodos) ######
+        return NodoASA(TipoNodo.EXPRESION_MATEMATICA, nodos=nuevosNodos, errorInfo=errorInfo) ######
 
 
     def __analizarExpresion(self):
@@ -128,6 +143,11 @@ class Analizador:
         """
 
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # Una expresión matemática en esta posición es obligatoria
         nuevosNodos += [self.__analizarExpresionMatematica()]
@@ -138,13 +158,18 @@ class Analizador:
         # Una expresión matemática en esta posición es obligatoria
         nuevosNodos += [self.__analizarExpresionMatematica()]
 
-        return NodoASA(TipoNodo.EXPRESION , nodos=nuevosNodos)
+        return NodoASA(TipoNodo.EXPRESION , nodos=nuevosNodos, errorInfo=errorInfo)
 
     def __analizarInvocacion(self):
         """
         Invocación ::= ir a mundo Identificador [Parámetros]
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # El invocador en esta posición es obligatorio
         self.__verificarInvocador()
@@ -160,7 +185,7 @@ class Analizador:
         # El ] en esta posición es obligatorio
         self.__verificar(']')
 
-        return NodoASA(TipoNodo.INVOCACION , nodos=nuevosNodos)
+        return NodoASA(TipoNodo.INVOCACION , nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarFuncion(self):
         """
@@ -168,6 +193,11 @@ class Analizador:
         """
 
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # La palabra mundo en esta posición es obligatoria
         self.__verificar('mundo')
@@ -188,7 +218,7 @@ class Analizador:
 
         # La función lleva el nombre del identificador
         return NodoASA(TipoNodo.FUNCION, \
-                contenido=nuevosNodos[0].contenido, nodos=nuevosNodos)
+                contenido=nuevosNodos[0].contenido, nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarParametrosFuncion(self):
         """
@@ -211,6 +241,11 @@ class Analizador:
         Parámetros Invocacion ::= Valor (,Valor)+
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # El valor en esta posición es obligatorio
         nuevosNodos += [self.__analizarValor()]
@@ -220,7 +255,7 @@ class Analizador:
             self.__verificar(',')
             nuevosNodos += [self.__analizarValor()]
 
-        return NodoASA(TipoNodo.PARAMETROS_INVOCACION , nodos=nuevosNodos) #######
+        return NodoASA(TipoNodo.PARAMETROS_INVOCACION , nodos=nuevosNodos, errorInfo=errorInfo) #######
     
 
     def __analizarInstruccion(self):
@@ -231,6 +266,11 @@ class Analizador:
         Los comentarios son ignorados
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         
         if self.componenteActual.lexema == 'bandera' or self.componenteActual.lexema == 'ir a mundo' or self.componenteActual.lexema == '[ POW ]':
@@ -261,7 +301,7 @@ class Analizador:
         elif self.componenteActual.tipo == TipoComponenteLexico.IDENTIFICADOR:
             nuevosNodos += [self.__analizarAsignacion()]
             
-        return NodoASA(TipoNodo.INSTRUCCION, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.INSTRUCCION, nodos=nuevosNodos, errorInfo=errorInfo)
     
 
     def __analizarRepeticion(self):
@@ -269,6 +309,11 @@ class Analizador:
         minijuego [Condicion] {Instruccion+}
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # analisis de la condicion
         self.__verificar('minijuego')
@@ -278,7 +323,7 @@ class Analizador:
 
         nuevosNodos += [self.__analizarBloqueInstrucciones()] #agregar nuevo
 
-        return NodoASA(TipoNodo.REPETICION, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.REPETICION, nodos=nuevosNodos, errorInfo=errorInfo)
     
 
     def __analizarBifurcacion(self):
@@ -286,6 +331,11 @@ class Analizador:
         Si (Sino)?
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # analisis de la bifurcacion
         # Si
@@ -295,7 +345,7 @@ class Analizador:
             nuevosNodos += [self.__analizarSino()] #agregar nuevo
 
 
-        return NodoASA(TipoNodo.BIFURCACION, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.BIFURCACION, nodos=nuevosNodos, errorInfo=errorInfo)
     
 
     def __analizarSi(self):
@@ -303,6 +353,11 @@ class Analizador:
         nivel (\n|\s)*[Condición](\n|\s)*BloqueInstrucciones
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # analizar Si
         self.__verificar('nivel')
@@ -312,7 +367,7 @@ class Analizador:
 
         nuevosNodos += [self.__analizarBloqueInstrucciones()] #agregar nuevo
 
-        return NodoASA(TipoNodo.SI, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.SI, nodos=nuevosNodos, errorInfo=errorInfo)
     
 
     def __analizarSino(self):
@@ -320,19 +375,29 @@ class Analizador:
         tubo (\n|\s)*BloqueInstrucciones
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # analizar Sino
         self.__verificar('tubo')
 
         nuevosNodos += [self.__analizarBloqueInstrucciones()] #agregar nuevo
 
-        return NodoASA(TipoNodo.SINO, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.SINO, nodos=nuevosNodos, errorInfo=errorInfo)
 
     def __analizarRetorno(self):
         """
         Retorno ::= bandera Valor?
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # analizar retorno
         self.__verificar('bandera')
@@ -342,13 +407,18 @@ class Analizador:
                                           TipoComponenteLexico.TEXTO, TipoComponenteLexico.VALOR_BOOLEANO]:
             nuevosNodos += [self.__analizarValor()]
 
-        return NodoASA(TipoNodo.RETORNO, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.RETORNO, nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarBloqueCondiciones(self):
         """
         BloqueCondiciones ::= Condicion | ([Condicion+] (OperadorBooleano BloqueCondiciones)?)
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         if self.componenteActual.lexema == '[':
             # VIene bloque de condiciones
@@ -371,13 +441,18 @@ class Analizador:
             # viene una sola condicion 
             nuevosNodos += [self.__analizarCondicion()]
 
-        return NodoASA(TipoNodo.BLOQUE_CONDICIONES, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.BLOQUE_CONDICIONES, nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarCondicion(self):
         """
         Condición ::= Comparación (OperadorBooleano Condición)?
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # se analiza la primera comparacion
         nuevosNodos += [self.__analizarComparacion()]
@@ -390,13 +465,18 @@ class Analizador:
             nuevosNodos = [self.__analizarBloqueCondiciones()]
 
 
-        return NodoASA(TipoNodo.CONDICION, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.CONDICION, nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarComparacion(self):
         """
         Comparación ::= Valor Comparador Valor
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         # analisis de la comparacion
         nuevosNodos += [self.__analizarValor()]
@@ -404,7 +484,7 @@ class Analizador:
         nuevosNodos += [self.__analizarValor()]
 
 
-        return NodoASA(TipoNodo.COMPARACION, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.COMPARACION, nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarOperadorBooleano(self):
         """
@@ -424,11 +504,16 @@ class Analizador:
         Error ::= [ POW ] Valor 
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         self.__verificar('[ POW ]')
         nuevosNodos += [self.__analizarValor()]
 
-        return NodoASA(TipoNodo.ERROR, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.ERROR, nodos=nuevosNodos, errorInfo=errorInfo)
     
 
     def __analizarPrincipal(self):
@@ -436,11 +521,16 @@ class Analizador:
         Principal :== juego (\n|\s)* BloqueInstrucciones
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
 
         self.__verificar('juego')
         nuevosNodos += [self.__analizarBloqueInstrucciones()]
 
-        return NodoASA(TipoNodo.PRINCIPAL, nodos=nuevosNodos)
+        return NodoASA(TipoNodo.PRINCIPAL, nodos=nuevosNodos, errorInfo=errorInfo)
     
     def __analizarLiteral(self):
         """
@@ -467,6 +557,11 @@ class Analizador:
         BloqueInstrucciones ::= { Instrucción+ }
         """
         nuevosNodos = []
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         # Obligatorio
         self.__verificar('{')
         # la primera instruccion obligatoria
@@ -479,7 +574,7 @@ class Analizador:
 
         # Obligatorio
         self.__verificar('}')
-        nodo = NodoASA(TipoNodo.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos)
+        nodo = NodoASA(TipoNodo.BLOQUE_INSTRUCCIONES, nodos=nuevosNodos, errorInfo=errorInfo)
         return nodo
     
     def __verificarIdentificador(self):
@@ -488,6 +583,11 @@ class Analizador:
 
         Identificador ::= [a-zA-Z_][0-9a-zA-Z_]*
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.IDENTIFICADOR)
 
         nodo = NodoASA(TipoNodo.IDENTIFICADOR, contenido=self.componenteActual.lexema)
@@ -512,8 +612,13 @@ class Analizador:
 
         Flotante ::= (-)?\d*.\d+
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.FLOTANTE)
-
+        
         nodo = NodoASA(TipoNodo.FLOTANTE, contenido =self.componenteActual.lexema)
         self.__pasarSiguienteComponente()
         return nodo
@@ -524,6 +629,11 @@ class Analizador:
 
         Entero ::= (-)?\d+
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.ENTERO)
 
         nodo = NodoASA(TipoNodo.ENTERO, contenido =self.componenteActual.lexema)
@@ -536,8 +646,12 @@ class Analizador:
         Comparador ::= Comparador ::= [ (<>|><|>-|<-|\^\^|--) \]')
 
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.COMPARADOR)
-
         nodo = NodoASA(TipoNodo.COMPARADOR, contenido =self.componenteActual.lexema)
         self.__pasarSiguienteComponente()
         return nodo
@@ -548,8 +662,12 @@ class Analizador:
 
         ValorBooleano ::= peach | bowser
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.VALOR_BOOLEANO)
-
         nodo = NodoASA(TipoNodo.VALOR_BOOLEANO, contenido=self.componenteActual.lexema)
         self.__pasarSiguienteComponente()
         return nodo
@@ -560,8 +678,12 @@ class Analizador:
 
         operador ::= '(\[ (\+|-|\*|\/|) \])')
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.OPERADOR)
-
         nodo = NodoASA(TipoNodo.OPERADOR, contenido=self.componenteActual.lexema)
         self.__pasarSiguienteComponente()
         return nodo
@@ -573,8 +695,12 @@ class Analizador:
         Texto ::= “[a-zA-Z_0-9]*”
 
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.TEXTO)
-
         nodo = NodoASA(TipoNodo.TEXTO, contenido=self.componenteActual.lexema)  # Eliminar las comillas
         self.__pasarSiguienteComponente()
         return nodo
@@ -585,6 +711,11 @@ class Analizador:
 
         Identificador ::= [a-zA-Z_][0-9a-zA-Z_]*
         """
+        errorInfo = {
+            "linea": self.componenteActual.lineaCodigo, 
+            "numeroLinea": self.componenteActual.numeroLinea, 
+            "numeroColumna": self.componenteActual.numeroColumna
+        }
         self.__verificarTipoComponente(TipoComponenteLexico.IDENTIFICADOR)
 
         nodo = NodoASA(TipoNodo.IDENTIFICADOR, contenido =self.componenteActual.lexema)

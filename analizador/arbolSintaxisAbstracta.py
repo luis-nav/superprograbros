@@ -62,13 +62,14 @@ class NodoASA:
         else:
             resultado += '{:10}\t'.format('')
 
-
+        resultado += '\n\t'
         if self.errorInfo != {}:
             resultado += '{:38}'.format(str(self.errorInfo))
         else:
             resultado += '{:38}\t'.format('')
 
         if self.nodos != []:
+            resultado += '\n\t'
             resultado += '<'
 
             # Imprime los tipos de los nodos del nivel siguiente
@@ -92,7 +93,7 @@ class ArbolSintaxisAbstracta:
         self.__imprimirPreordenAux(self.raiz)
 
     def __imprimirPreordenAux(self, nodo):
-        print(nodo)
+        print(nodo, end='\n\n\n')
 
         if nodo is not None:
             for nodoHijo in nodo.nodos:
