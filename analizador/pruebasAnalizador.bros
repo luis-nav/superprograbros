@@ -11,7 +11,7 @@ mundo esConsonante [caracter] {
         nivel [consonanteActual  [ <> ] caracter] {
             bandera peach [ ; ]
         }
-        indice [ ? ] indice [ + ] 1 [ ; ]
+        indice [ ? ] [indice [ + ] 1] [ ; ]
     }
     
     bandera bowser [ ; ]
@@ -19,14 +19,14 @@ mundo esConsonante [caracter] {
 
 [ ! ] Esta funciona retorna la cantidad de consonantes que hay en una palabra dada
 mundo cantidadConsonantes [palabra] {
-    largoPalabra [ ? ] puntuacion[palabra] [ ; ]
+    largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]
     indice [ ? ] 0 [ ; ]
     contador [ ? ] 0 [ ; ]
     minijuego [indice [ -- ] largoPalabra] {
         char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
         lowerChar [ ? ] ir a mundo daisy[char] [ ; ]
         nivel (ir a mundo esConsonante[lowerChar] [ <> ] peach) {
-            contador [ ? ] contador [ + ] 1 [ ; ]
+            contador [ ? ] [contador [ + ] 1] [ ; ]
         }
         indice [ ? ] indice [ + ] 1 [ ; ]
     }
@@ -38,7 +38,7 @@ mundo cantidadConsonantes [palabra] {
 mundo sumaDigitosPares [numero] {
     suma [ ? ] 0 [ ; ]
 
-    minijuego [numero [^^] 0 ]{
+    minijuego [numero [ ^^ ] 0 ]{
         digitoActual [ ? ] ir a mundo florFuego[numero, 10] [ ; ]
         parDigito [ ? ] ir a mundo florFuego[digitoActual, 2] [ ; ]
 
@@ -56,7 +56,7 @@ mundo sumaDigitosPares [numero] {
 mundo multiDigitos [numero] {
     resultado [ ? ] 0 [ ; ]
 
-    minijuego [numero [^^] 0 ]{
+    minijuego [numero [ ^^ ] 0 ]{
         digitoActual [ ? ] ir a mundo florFuego[numero, 10] [ ; ]
 
         resultado [ ? ] resultado [ * ] digitoActual [ ; ]

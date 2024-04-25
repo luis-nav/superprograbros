@@ -85,7 +85,7 @@ class Analizador:
 
         # Caso2: un literal o una expresión matemática
         elif self.componenteActual.tipo in [TipoComponenteLexico.ENTERO, TipoComponenteLexico.FLOTANTE, TipoComponenteLexico.TEXTO, 
-                                          TipoComponenteLexico.VALOR_BOOLEANO, TipoComponenteLexico.IDENTIFICADOR]: 
+                                          TipoComponenteLexico.VALOR_BOOLEANO, TipoComponenteLexico.IDENTIFICADOR, TipoComponenteLexico.PUNTUACION]: 
             nuevosNodos += [self.__analizarExpresionMatematica()]
 
         # Error
