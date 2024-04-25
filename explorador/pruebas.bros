@@ -22,10 +22,6 @@ mundo esBisiesto [anno] {
         bandera bowser [ ; ]
     }
 }
-juego {
-    ir a mundo esBisiesto [2024] [ ; ]
-}
- 
  
 [ ! ]Esta funciona retorna la sumatoria de un rango
 mundo sumatoriaRango [inicioRango, finRango] {
@@ -37,10 +33,6 @@ mundo sumatoriaRango [inicioRango, finRango] {
     }
     bandera sum [ ; ]
 }
-juego {
-    ir a mundo sumatoriaRango [2, 7] [ ; ]
-}
-
 
 [ ! ]Esta funciona retorna la cantidad de vocales que hay en una palabra
 mundo cantidadVocales [palabra] {
@@ -57,10 +49,6 @@ mundo cantidadVocales [palabra] {
     }
     bandera contador [ ; ]
 }
-juego {
-    ir a mundo cantidadVocales ["hola"] [ ; ]
-}
-
 
 [ ! ]Esta funciona retorna si una palabra contiene un caracter
 mundo contiene [palabra, caracter] {
