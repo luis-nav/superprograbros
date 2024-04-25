@@ -18,6 +18,7 @@ class TipoNodo(Enum):
     SINO = auto()
     RETORNO = auto()
     CONDICION = auto()
+    BLOQUE_CONDICIONES = auto()
     COMPARACION = auto()
     OPERADOR_BOOLEANO = auto()
     ERROR = auto()
