@@ -17,6 +17,10 @@ mundo esConsonante [caracter] {
     bandera bowser [ ; ]
 }
 
+juego {
+    ir a mundo cantidadConsonantes ["palabra"] [ ; ]
+}
+
 [ ! ] Esta funciona retorna la cantidad de consonantes que hay en una palabra dada
 mundo cantidadConsonantes [palabra] {
     largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]
@@ -25,14 +29,14 @@ mundo cantidadConsonantes [palabra] {
     minijuego [indice [ -- ] largoPalabra] {
         char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
         lowerChar [ ? ] ir a mundo daisy[char] [ ; ]
-        nivel (ir a mundo esConsonante[lowerChar] [ <> ] peach) {
+        esConsonante [ ? ] ir a mundo esConsonante[lowerChar] [ ; ]
+        nivel [ esConsonante [ <> ] peach] {
             contador [ ? ] [contador [ + ] 1] [ ; ]
         }
-        indice [ ? ] indice [ + ] 1 [ ; ]
+        indice [ ? ] [indice [ + ] 1] [ ; ]
     }
     bandera contador [ ; ]
 }
-
 
 [ ! ] Suma de digitos pares de un numero dado
 mundo sumaDigitosPares [numero] {
@@ -42,10 +46,11 @@ mundo sumaDigitosPares [numero] {
         digitoActual [ ? ] ir a mundo florFuego[numero, 10] [ ; ]
         parDigito [ ? ] ir a mundo florFuego[digitoActual, 2] [ ; ]
 
-        nivel (parDigito [ <> ] 0){
-            suma [ ? ] suma [ + ] digitoActual [ ; ]
+        nivel [parDigito [ <> ] 0]{
+            suma [ ? ] [suma [ + ] digitoActual] [ ; ]
         }
-        numero [ ? ] yoshi[ numero [ / ] 10 ] [ ; ]
+        digito [ ? ] [numero [ / ] 10] [ ; ]
+        numero [ ? ] ir a mundo yoshi[digito] [ ; ]
     }
 
     bandera suma [ ; ]
@@ -59,9 +64,10 @@ mundo multiDigitos [numero] {
     minijuego [numero [ ^^ ] 0 ]{
         digitoActual [ ? ] ir a mundo florFuego[numero, 10] [ ; ]
 
-        resultado [ ? ] resultado [ * ] digitoActual [ ; ]
+        resultado [ ? ] [resultado [ * ] digitoActual] [ ; ]
 
-        numero [ ? ] yoshi[ numero [ / ] 10 ] [ ; ]
+        digito [ ? ] [numero [ / ] 10] [ ; ]
+        numero [ ? ] ir a mundo yoshi[ digito ] [ ; ]
     }
 
     bandera suma [ ; ]
@@ -71,11 +77,11 @@ mundo multiDigitos [numero] {
 [ ! ] Calcula la secuencia de fibonacchi de un numero dado, recibe un numero mayor o igual a cero
 mundo fibo[n]{
     
-    nivel (n [ <> ] 0 ){
+    nivel [n [ <> ] 0 ]{
         bandera 0 [ ; ]
     }
 
-    nivel (n [ <> ] 1){
+    nivel [n [ <> ] 1]{
         bandera 1 [ ; ]
     }tubo {
         a [ ? ] 0 [ ; ]
@@ -85,9 +91,9 @@ mundo fibo[n]{
         minijuego [index [ <- ] n ]{
             aux [ ? ] a [ ; ]
             a [ ? ] b [ ; ]
-            b [ ? ] aux [ + ] b [ ; ]
+            b [ ? ] [aux [ + ] b] [ ; ]
 
-            index [ ? ] index [ + ] 1 [ ; ]
+            index [ ? ] [index [ + ] 1] [ ; ]
         }
         bandera b [ ; ]
     }
