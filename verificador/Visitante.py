@@ -1,5 +1,9 @@
 
+from verificador.TablaSimbolos import TablaSimbolos
+
 class Visitante:
 
-    def __init__(self):
-        return
+    tablaSimbolos: TablaSimbolos
+
+    def __init__(self, nuevaTablaSimbolos):
+        self.tablaSimbolos = nuevaTablaSimbolos

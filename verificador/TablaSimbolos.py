@@ -39,7 +39,7 @@ class TablaSimbolos:
     def __init__(self):
         self.simbolos = []
 
-    def incluir(self, nombre, ref):
+    def incluir(self, nombre:str, ref):
         """
         Ingresa un registro arriba de la pila
         """
@@ -99,11 +99,14 @@ class TablaSimbolos:
 
     
     def __str__(self):
-        toStr = ""
+        toStr = "TABLA DE SÍMBOLOS\n\n"
+        toStr = "Profundidad: " + str(self.profundidad) +'\n\n'
+
         for registro in self.simbolos:
-            toStr += str(registro)
+            toStr += str(registro) + '\n'
         
         return toStr
+
     
 
 # mySymbols = TablaSimbolos()
