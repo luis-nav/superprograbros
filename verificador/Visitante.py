@@ -105,3 +105,6 @@ class Visitante:
 
         else:
             raise Exception('Tipo de nodo no existe')
+    
+    def __visitarBloqueInstrucciones(self, nodo):
+        return nodo
