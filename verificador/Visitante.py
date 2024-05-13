@@ -13,6 +13,7 @@ class Visitante:
         """
         Es necesario ya que todos los nodos son del mismo tipo en el arbol
         """
+        # -------------------- JOHN -------------------------
         if nodo.tipo is TipoNodo.PROGRAMA:
             self.__visitarPrograma(nodo)
 
@@ -40,6 +41,7 @@ class Visitante:
         elif nodo.tipo is TipoNodo.INSTRUCCION:
             self.__visitarInstruccion(nodo)
 
+        # -------------------- Vicky  -------------------------
         elif nodo.tipo is TipoNodo.BLOQUE_INSTRUCCIONES:
             self.__visitarBloqueInstrucciones(nodo)
 
@@ -70,6 +72,7 @@ class Visitante:
         elif nodo.tipo is TipoNodo.OPERADOR_BOOLEANO:
             self.__visitarOperadorBooleano(nodo)
 
+        # -------------------- Hytan  -------------------------
         elif nodo.tipo is TipoNodo.ERROR:
             self.__visitarError(nodo)
             
