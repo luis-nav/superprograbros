@@ -38,16 +38,18 @@ class NodoASA:
     Clase que representa un nodo generico del ASA.
     Cada nodo puede tener n nodos hijos y tiene su componente lexico con la informacion de error
     """
-    tipo : TipoNodo
-    contenido : str
-    errorInfo : dict
-    hijos : list
+    tipo        : TipoNodo
+    contenido   : str
+    errorInfo   : dict
+    hijos       : list
+    atributos   : dict
 
     def __init__(self, tipo, contenido = None, nodos = [], errorInfo = {}):
         self.tipo = tipo
         self.contenido = contenido
         self.nodos = nodos
         self.errorInfo = errorInfo
+        self.atributos = {}
 
     def visitar(self, visitador):
         return visitador.visitar(self)
