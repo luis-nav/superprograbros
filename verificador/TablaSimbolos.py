@@ -39,11 +39,12 @@ class TablaSimbolos:
     def __init__(self):
         self.simbolos = []
 
-    def incluir(self, nombre:str, ref):
+    def incluir(self, ref):
         """
         Ingresa un registro arriba de la pila
+        Solo se necesita como parametro el nodo de referencia
         """
-        registro = Registro(nombre, self.nivelActual, ref)
+        registro = Registro(ref.contenido, self.nivelActual, ref)
         self.simbolos.append(registro)
     
     def extraer(self):
