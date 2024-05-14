@@ -1,6 +1,7 @@
 
 from verificador.TablaSimbolos import TablaSimbolos
-from analizador.arbolSintaxisAbstracta import ArbolSintaxisAbstracta, NodoASA, TipoNodo
+from analizador.arbolSintaxisAbstracta import NodoASA, TipoNodo
+from utils.TipoDatos import TipoDatos
 
 class Visitante:
 
@@ -105,3 +106,127 @@ class Visitante:
 
         else:
             raise Exception('Tipo de nodo no existe')
+    
+
+    def __visitarPrograma(self, nodoActual):
+        """
+        Programa ::= ((Comentario | Asignacion | Funcion)(\n|\s)*)* Principal
+        """
+        for nodo in nodoActual.nodos:
+            # acá 'self' quiere decir que al método 'visitar' le paso el
+            # objetto visitante que estoy usando (o sea, este mismo...
+            # self)
+            nodo.visitar(self)
+
+    def __visitarAsignacion(self, nodoActual):
+        """
+        Asignación ::= Identificador [ ? ] (ExpresionMate | Invocación)  [ ; ]
+        """
+        # Se ingresa el identificador a la tabla de simbolos
+        self.tablaSimbolos.incluir(nodoActual.nodos[0])
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        # Si es una función verifico el tipo que retorna para incluirlo en
+        # la asignación y si es un literal puedo anotar el tipo (TIPO) 
+
+        nodoActual.atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+
+        nodoActual.nodos[0].atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+
+    def __visitarExpresionMatematica(self, nodoActual):
+        """
+        ExpresionMate ::= Valor | [Expresion]
+        """
+        for nodo in nodoActual.nodos:
+
+            # Verifico que exista si es un identificador (IDENTIFICACIÓN)
+            if nodo.tipo == TipoNodo.IDENTIFICADOR:
+                registro = self.tablaSimbolos.buscar(nodo.contenido)
+
+            nodo.visitar(self)
+
+        # Anoto el tipo de datos 'NÚMERO' (TIPO)
+        nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+
+    def __visitarExpresion(self, nodoActual):
+        """
+        Expresion ::= ExpresionMate Operador ExpresionMate
+        """
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        # Anoto el tipo de datos 'NÚMERO' (TIPO)
+        nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+
+    def __visitarInvocacion(self, nodoActual):
+        """
+        Invocación ::= ir a mundo Identificador [Parámetros]
+        """
+        # Verificacion del identificador de la funcion
+        registro = self.tablaSimbolos.buscar(nodoActual.nodos[0].contenido)
+
+        if registro.obtenerReferencia().tipo != TipoNodo.FUNCIÓN:
+            raise Exception('Es una variable', registro)
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        # El tipo resultado de la invocación es el tipo inferido de una
+        # función previamente definida
+        nodoActual.atributos['tipo'] = registro.obtenerReferencia().atributos['tipo']
+
+    def __visitarFuncion(self, nodoActual):
+        """
+        Funcion ::= mundo Identificador [ParametrosFunción](\n|\s)* BloqueInstrucciones
+        """
+        # Meto la función en la tabla de símbolos (IDENTIFICACIÓN)
+        self.tablaSimbolos.nuevo_registro(nodoActual)
+
+        self.tablaSimbolos.iniciarBloque()
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        self.tablaSimbolos.cerrarBloque()
+
+        # Anoto el tipo de retorno (TIPO)
+        nodoActual.atributos['tipo'] = nodoActual.nodos[2].atributos['tipo']
+
+    def __visitarParametrosFuncion(self, nodoActual):
+        """
+        ParametrosFunción ::= Identificador (,Identificador)*
+        
+        """
+        for nodo in nodoActual.nodos:
+
+            # Se verifica que el identificador exista
+            self.tablaSimbolos.incluir(nodo)
+            nodo.visitar(self)
+
+    def __visitarParametrosInvocacion(self, nodoActual):
+        """
+        Parámetros ::= Valor (,Valor)*
+        """
+        for nodo in nodoActual.nodos:
+
+            # Se busca en la tabla si es un identificador
+            if nodo.tipo == TipoNodo.IDENTIFICADOR:
+                registro = self.tablaSimbolos.buscar(nodo.contenido)
+
+            elif nodo.tipo == TipoNodo.FUNCION:
+                raise Exception('No se permitan funciones como parametros de invocacion de funcion', nodo.contenido) 
+
+            # Si son otra cosa, simplemente se visitan
+            nodo.visitar(self)
+
+    def __visitarInstruccion(self, nodoActual):
+        """
+        Instrucción ::= ((Retorno | Error | Invocación)[ ; ] | Repetición | Bifurcación | Asignación | Comentario)(\n|\s)* 
+        """
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+            nodoActual.atributos['tipo'] = nodo.atributos['tipo']
+    
