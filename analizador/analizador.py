@@ -273,7 +273,8 @@ class Analizador:
         }
 
         
-        if self.componenteActual.lexema == 'bandera' or self.componenteActual.lexema == 'ir a mundo' or self.componenteActual.lexema == '[ POW ]':
+        if self.componenteActual.lexema == 'bandera' or self.componenteActual.lexema == 'ir a mundo' or \
+            self.componenteActual.lexema == '[ POW ]':
 
             # Retorno
             if self.componenteActual.tipo == TipoComponenteLexico.RETORNO:
