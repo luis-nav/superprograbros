@@ -1,3 +1,4 @@
+from generador.generador import Generador
 from utils import cargarArchivo
 from explorador.explorador import Explorador
 from analizador.analizador import Analizador
@@ -54,7 +55,22 @@ def SuperPrograBros():
         print("Error: No implementado")
 
     elif args.python == True:
-        print("Error: No implementado")
+        archivo = cargarArchivo(args.archivo)
+
+        explorador = Explorador(archivo)
+        res_valida_explorador = explorador.explorar()
+        if (not res_valida_explorador):
+            return
+        analizador = Analizador(explorador.componentes)
+        analizador.analizar()
+        if analizador.error:
+            return
+        generador = Generador(analizador.asa)
+        # Nombre y ubicacion del nuevo archivo
+        indice = args.archivo.rfind(".")
+        nombre = args.archivo[:indice+1] + "py"
+        generador.generar(nombre)
+        print("Se ha generado el archivo en ", nombre)
 
     else:
         parser.print_help()
