@@ -23,7 +23,7 @@ class Explorador:
             (TipoComponenteLexico.OPERADOR_BOOLEANO, r'\[ (&|\|) \]'),
             (TipoComponenteLexico.FIN_INSTRUCCION, r'\[ ; \]'), 
             (TipoComponenteLexico.PUNTUACION, r'\[|\]|\(|\)|\{|\}|\,'),
-            (TipoComponenteLexico.IDENTIFICADOR, r'[a-zA-Z][a-zA-Z0-9]*'),
+            (TipoComponenteLexico.IDENTIFICADOR, r'[a-zA-Z][a-zA-Z0-9ñ]*'),
             (TipoComponenteLexico.BLANCOS, r'(\s)+'),
             (TipoComponenteLexico.NO_IDENTIFICADO, r'.*')]
 
