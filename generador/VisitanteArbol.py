@@ -48,6 +48,8 @@ class VisitanteArbol:
                 return self.__visitarCondicion(nodo)
             case TipoNodo.COMPARACION:
                 return self.__visitarComparacion(nodo)
+            case TipoNodo.OPERADOR_BOOLEANO:
+                return self.__visitarOperadorBooleano(nodo)
             case TipoNodo.IDENTIFICADOR:
                 return self.__visitarIdentificador(nodo)
             case TipoNodo.COMPARADOR:
@@ -319,6 +321,16 @@ class VisitanteArbol:
 
         return resultado.format(instrucciones[0], instrucciones[1], instrucciones[2])
     
+    def __visitarOperadorBooleano(self, nodoActual):
+        """
+        OperadorBooleano ::=  [( & | | )]
+        """
+
+        if nodoActual.contenido == "[ & ]":
+            return "and"
+        else:
+            return "or"
+
     def __visitarIdentificador(self, nodoActual):
         """
         Identificador ::= [a-zA-Z_][0-9a-zA-Z_]*
