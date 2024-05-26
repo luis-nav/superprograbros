@@ -230,3 +230,158 @@ class Visitante:
             nodo.visitar(self)
             nodoActual.atributos['tipo'] = nodo.atributos['tipo']
     
+
+    def __visitarBloqueInstrucciones(self, nodoActual):
+        """
+        BloqueInstrucciones ::= { Instrucción+ }
+        """
+
+        # For para visitar todas las instrucciones
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        # Aquí se guarda el tipo de dato de retorno si hay
+        nodoActual.atributos['tipo'] = TipoDatos.NINGUNO 
+
+        for nodo in nodoActual.nodos:
+            if nodo.atributos['tipo'] != TipoDatos.NINGUNO:
+                nodoActual.atributos['tipo'] = nodo.atributos['tipo']
+
+    def __visitarRepeticion(self, nodoActual):
+        """
+        Repetición ::= minijuego [Condicion] BloqueInstrucciones
+        """
+        # Visita la condición
+
+        # Visita el bloque de instrucciones
+        self.tablaSimbolos.iniciarBloque()
+        nodoActual.nodos[0].visitar(self)
+        self.tablaSimbolos.cerrarBloque()
+
+        # Guarda el tipo de retorno
+        nodoActual.atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+    
+    def __visitarBifurcacion(self, nodoActual):
+        """
+        Bifurcación ::= Si (Sino)?
+        """
+
+        # Visita los dos nodos en el siguiente nivel si existen
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        nodoActual.atributos['tipo'] = TipoDatos.CUALQUIERA
+
+    def __visitarSi(self, nodoActual):
+        """
+        Si ::= nivel (\n|\s)*[Condición](\n|\s)*BloqueInstrucciones
+        """
+        # Visita la condición
+
+        # Visita el bloque de instrucciones
+        self.tablaSimbolos.iniciarBloque()
+        nodoActual.nodos[0].visitar(self)
+        self.tablaSimbolos.cerrarBloque()
+
+        # Guarda el tipo de retorno
+        nodoActual.atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+
+    def __visitarSiNo(self, nodoActual):
+        """
+        Sino ::= tubo (\n|\s)*BloqueInstrucciones
+        """
+        # Visita el bloque de instrucciones
+        self.tablaSimbolos.iniciarBloque()
+        nodoActual.nodos[0].visitar(self)
+        self.tablaSimbolos.cerrarBloque()
+
+        # Guarda el tipo de retorno
+        nodoActual.atributos['tipo'] = nodoActual.nodos[0].atributos['tipo']
+
+    def __visitarRetorno(self, nodoActual):
+        """
+        Retorno ::= bandera Valor?
+        """
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+        
+        if nodoActual.nodos == []:
+            # Si no retorna un valor no retorna un tipo específico 
+            nodoActual.atributos['tipo'] = TipoDatos.NINGUNO
+
+        else:
+            for nodo in nodoActual.nodos:
+                nodo.visitar(self)
+
+                if nodo.tipo == TipoNodo.IDENTIFICADOR:
+                    # Verifica si el valor es un identificador que exista
+                    registro = self.tablaSimbolos.buscar(nodo.contenido)
+
+                    # Se le da a bandera el tipo de retorno del identificador encontrado
+                    nodoActual.atributos['tipo'] = registro['referencia'].atributos['tipo']
+                else:
+                    # Verifica si es un Literal de que tipo es
+                    nodoActual.atributos['tipo'] = nodo.atributos['tipo']
+
+    def __visitarCondicion(self, nodoActual):
+        """
+        Condición ::= Comparación (OperadorBooleano Condición)?
+        """
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        # Comparación retorna un valor de verdad
+        nodoActual.atributos['tipo'] = TipoDatos.VALOR_VERDAD
+
+    def __visitarBloqueCondiciones(self, nodoActual):
+        """
+        BloqueCondiciones ::= Condicion | ([Condicion+] (OperadorBooleano BloqueCondiciones)?)
+        """
+        # For para visitar todas las condiciones
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        # Condición retorna un valor de verdad
+        nodoActual.atributos['tipo'] = TipoDatos.VALOR_VERDAD
+
+    def __visitarComparacion(self, nodoActual):
+        """
+        Comparación ::= Valor Comparador Valor
+        """
+
+        # Si los valores son identificadores se asegura que existan
+        for nodo in nodoActual.nodos:
+            if nodo.tipo == TipoNodo.IDENTIFICADOR:
+                registro = self.tablaSimbolos.buscar(nodo.contenido)
+
+            nodo.visitar(self)
+
+        # Verificar que los tipos coincidan
+        valor_izq = nodoActual.nodos[0]
+        comparador = nodoActual.nodos[1]
+        valor_der = nodoActual.nodos[2]
+
+        if valor_izq.atributos['tipo'] == valor_der.atributos['tipo']:
+            comparador.atributos['tipo'] = valor_izq.atributos['tipo']
+
+            # Una comparación siempre tiene un valor de verdad
+            nodoActual.atributos['tipo'] = TipoDatos.VALOR_VERDAD
+
+        # Caso especial: Si alguno de los dos es un identificador de
+        # un parámetro de función no puedo saber que tipo tiene o va a
+        # tener por que este lenguaje no es tipado
+        elif valor_izq.atributos['tipo'] == TipoDatos.CUALQUIERA or \
+                valor_der.atributos['tipo'] == TipoDatos.CUALQUIERA:
+            comparador.atributos['tipo'] = TipoDatos.CUALQUIERA
+            nodoActual.atributos['tipo'] = TipoDatos.CUALQUIERA
+        else:
+            raise Exception('Error', str(nodoActual))
+    
+    def __visitarOperadorBooleano(self, nodoActual):
+        """
+        OperadorBooleano ::=  [( & | | )]
+        """
+        # Operador para trabajar con valores de verdad
+        nodoActual.atributos['tipo'] = TipoDatos.VALOR_VERDAD
