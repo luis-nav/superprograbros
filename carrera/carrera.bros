@@ -1,0 +1,66 @@
+[ ! ] Retorna si el juego ya termino
+mundo yaGano [strJuego, final] {
+    caracter [ ? ] ir a mundo moneda[strJuego, final] [ ; ]
+    nivel [caracter [ <> ] "o"] {
+        bandera peach [ ; ]
+    } tubo {
+        bandera bowser [ ; ]
+    }
+}
+
+[ ! ] Retorna un nuevo estado del juego donde el caracol pudo avanzar de 0 a n pasos
+mundo movimiento[strJuego, pasosMaximos] {
+    pasos [ ? ] ir a mundo bloque[0, pasosMaximos] [ ; ]
+    largo [ ? ] ir a mundo puntuacion[strJuego] [ ; ]
+    ubicacion [ ? ] ir a mundo wario[strJuego, "o"] [ ; ]
+    ubicacionFinal [ ? ] [pasos [ + ] ubicacion] [ ; ]
+    nivel [ubicacionFinal [ >- ] largo] {
+        ubicacionFinal [ ? ] [largo [ - ] 1] [ ; ]
+    }
+
+    strJuego [ ? ] ir a mundo aplastarGoomba[strJuego, ubicacion, "="] [ ; ]
+    strJuego [ ? ] ir a mundo aplastarGoomba[strJuego, ubicacionFinal, "o"] [ ; ]
+    bandera strJuego [ ; ]
+}
+
+juego {
+    pasosMaximos [ ? ] 2 [ ; ]
+    pista1 [ ? ] "===F" [ ; ]
+    pista2 [ ? ] "===F" [ ; ]
+
+    caracol1 [ ? ] "o" [ ; ]
+    caracol2 [ ? ] "o" [ ; ]
+
+    strJuego1 [ ? ] ir a mundo champiñon[caracol1,pista1] [ ; ]
+    strJuego2 [ ? ] ir a mundo champiñon[caracol2,pista2] [ ; ]
+
+    ir a mundo estrella[strJuego1] [ ; ]
+    ir a mundo estrella[strJuego2] [ ; ]
+
+    yaGano1 [ ? ] ir a mundo yaGano[strJuego1, 4] [ ; ]
+    yaGano2 [ ? ] ir a mundo yaGano[strJuego2, 4] [ ; ]
+
+    minijuego [yaGano2 [ <> ] bowser] {
+        [ ! ] Ejecucion movimiento caracol 1
+        strJuego1 [ ? ] ir a mundo movimiento[strJuego1, pasosMaximos] [ ; ]
+        ir a mundo estrella["Caracol 1:"] [ ; ]
+        ir a mundo estrella[strJuego1] [ ; ]
+        ir a mundo pausa[1] [ ; ]
+        yaGano1 [ ? ] ir a mundo yaGano[strJuego1, 4] [ ; ]
+
+        nivel [ yaGano1 [ <> ] peach ] {
+            ir a mundo estrella["Ha ganado el caracol 1!"] [ ; ]
+            bandera [ ; ]
+        }
+
+        [ ! ] Ejecucion movimiento caracol 2
+        strJuego2 [ ? ] ir a mundo movimiento[strJuego2, pasosMaximos] [ ; ]
+        ir a mundo estrella["Caracol 2:"] [ ; ]
+        ir a mundo estrella[strJuego2] [ ; ]
+        ir a mundo pausa[1] [ ; ]
+        yaGano2 [ ? ] ir a mundo yaGano[strJuego2, 4] [ ; ]
+    }
+    [ ! ] Solo sale del while si gana el caracol 2
+    [ ! ] Si gana el caracol 1, se detiene la ejecucion dentro del while
+    ir a mundo estrella["Ha ganado el caracol 2!"] [ ; ]
+}
