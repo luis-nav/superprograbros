@@ -8,6 +8,7 @@ class Visitante:
     tablaSimbolos: TablaSimbolos
 
     def __init__(self, nuevaTablaSimbolos):
+        # Creamos un visitante y visitamos el nodo de error
         self.tablaSimbolos = nuevaTablaSimbolos
 
     def visitar(self, nodo :NodoASA):
@@ -385,3 +386,105 @@ class Visitante:
         """
         # Operador para trabajar con valores de verdad
         nodoActual.atributos['tipo'] = TipoDatos.VALOR_VERDAD
+
+    def __visitarError(self, nodoActual):
+        """
+        Error ::= [ POW ] Valor
+        """
+        for nodo in nodoActual.nodos:
+            if nodo.tipo == TipoNodo.IDENTIFICADOR:
+                self.tablaSimbolos.buscar(nodo.contenido)
+
+        nodoActual.atributos['tipo'] = TipoDatos.NINGUNO 
+
+    def __visitarValorBooleano(self, nodoActual):
+        """
+        ValorBooleano ::=  peach | bowser
+        """
+        # Marcar el tipo de dato del nodo actual como valor de verdad (booleano)
+        nodoActual.atributos['tipo'] = TipoDatos.VALOR_VERDAD
+
+    def __visitarEntero(self, nodoActual):
+        """
+        Entero ::=  (-)?\d+
+        """
+
+        # Marcar el tipo de dato del nodo actual como ENTERO
+        nodoActual.atributos['tipo'] = TipoDatos.ENTERO
+
+    def __visitarFlotante(self, nodoActual):
+        """
+        Flotante ::=  (-)?\d*.\d+*
+        """
+
+        # Marcar el tipo de dato del nodo actual como FLOTANTE
+        nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+
+     
+    def __visitarTexto(self, nodoActual):
+            """
+            Texto ::= “[a-zA-Z_0-9]*”
+
+            """
+            # Marcar el tipo de dato del nodo actual como TEXTO
+            nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+
+    def __visitarPrincipal(self, nodoActual):
+        """
+        Principal ::= jugar BloqueInstrucciones
+        """
+        # Inicia un nuevo bloque de scope para el programa principal
+        self.tablaSimbolos.iniciarBloque()
+
+        # Visita el bloque de instrucciones del programa principal
+        nodoActual.nodos[0].visitar(self)
+
+        self.tablaSimbolos.cerrarBloque()
+
+        nodoActual.atributos['tipo'] = nodoActual.nodos[0].atributos['tipo']
+
+    def __visitarAsignacion(self, nodoActual):
+        """
+        Asignación ::= Identificador [ ? ] (Literal |ExpresionMate | Invocación)  [ ; ]
+        """
+        # Se ingresa el identificador a la tabla de símbolos
+        self.tablaSimbolos.incluir(nodoActual.nodos[0])
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
+        nodoActual.atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+
+        nodoActual.nodos[0].atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+
+    def __visitarComparador(self, nodoActual):
+        """
+        Comparador ::= ( [ <> ] | [ >< ] | [ >- ] | [ <- ] | [^^] | [ -- ] )
+
+        """
+
+        """
+        No estoy seguro si esto se necesita
+
+        if nodoActual.contenido not in ['[ >< ] ', '[ <> ]' ]:
+            nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+
+        else:
+        """
+
+        nodoActual.atributos['tipo'] = TipoDatos.CUALQUIERA 
+
+    def __visitarIdentificador(self, nodoActual):
+        """
+        Identificador ::= [a-z][a-zA-Z0-9]+
+        """
+        nodoActual.atributos['tipo'] = TipoDatos.CUALQUIERA
+       
+    def __visitarOperador(self, nodoActual):
+        """
+        Operador ::= ([ + ] | - ] | * ] | / ])
+
+        """
+        nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+        
+    
