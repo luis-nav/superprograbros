@@ -258,13 +258,13 @@ class VisitanteArbol:
         tubo (\n|\s)*BloqueInstrucciones
         """
 
-        resultado = """else:\n{}"""
+        resultado = """{}else:\n{}"""
 
         instrucciones = ""
         for nodo in nodoActual.nodos:
             instrucciones = nodo.visitar(self)
 
-        return resultado.format(instrucciones)
+        return resultado.format(self.__retornarTabuladores(), instrucciones)
     
     def __visitarRetorno(self, nodoActual):
         """
@@ -450,7 +450,7 @@ if __name__ == '__main__':
         "__spbUsrInput = input(\"La condicion va para \\033[92mpeach\\033[0m o para \\033[91mbowser\\033[0m: \")",
         "while (__spbUsrInput != \"peach\" and __spbUsrInput != \"bowser\"):",
         "   __spbUsrInput = input(\"La condicion va para \\033[92mpeach\\033[0m o para \\033[91mbowser\\033[0m: \")",
-        "if ((__spbUsrInput == \"peach\" and {0}) or (__spbUsrInput == \"bowser\" and {0})):".format(condicion),
+        "if ((__spbUsrInput == \"peach\" and {0}) or (__spbUsrInput == \"bowser\" and not {0})):".format(condicion),
         "   print(\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n¡Tamos gucci! \U0001F60E\U0001F44D\")",
         "else:",
         "   raise Exception(\"\\033[91m¡Has decidido la opcion incorrecta!\\033[0m \U0001F612\")"
