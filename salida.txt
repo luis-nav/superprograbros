@@ -1,0 +1,2656 @@
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: caracter : 1 : TipoNodo.IDENTIFICADOR        	caracter  	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: caracter : 1 : TipoNodo.IDENTIFICADOR        	caracter  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: consonantes : 1 : TipoNodo.IDENTIFICADOR        	consonantes	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: caracter : 1 : TipoNodo.IDENTIFICADOR        	caracter  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: consonantes : 1 : TipoNodo.IDENTIFICADOR        	consonantes	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: cantCons : 1 : TipoNodo.IDENTIFICADOR        	cantCons  	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: caracter : 1 : TipoNodo.IDENTIFICADOR        	caracter  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: consonantes : 1 : TipoNodo.IDENTIFICADOR        	consonantes	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: cantCons : 1 : TipoNodo.IDENTIFICADOR        	cantCons  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 2
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: caracter : 1 : TipoNodo.IDENTIFICADOR        	caracter  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: consonantes : 1 : TipoNodo.IDENTIFICADOR        	consonantes	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: cantCons : 1 : TipoNodo.IDENTIFICADOR        	cantCons  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: consonanteActual : 2 : TipoNodo.IDENTIFICADOR        	consonanteActual	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 2
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: caracter : 1 : TipoNodo.IDENTIFICADOR        	caracter  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: consonantes : 1 : TipoNodo.IDENTIFICADOR        	consonantes	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: cantCons : 1 : TipoNodo.IDENTIFICADOR        	cantCons  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: consonanteActual : 2 : TipoNodo.IDENTIFICADOR        	consonanteActual	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: caracter : 1 : TipoNodo.IDENTIFICADOR        	caracter  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: consonantes : 1 : TipoNodo.IDENTIFICADOR        	consonantes	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: cantCons : 1 : TipoNodo.IDENTIFICADOR        	cantCons  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: contador : 1 : TipoNodo.IDENTIFICADOR        	contador  	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 2
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: contador : 1 : TipoNodo.IDENTIFICADOR        	contador  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: char : 2 : TipoNodo.IDENTIFICADOR        	char      	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 2
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: contador : 1 : TipoNodo.IDENTIFICADOR        	contador  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: char : 2 : TipoNodo.IDENTIFICADOR        	char      	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: lowerChar : 2 : TipoNodo.IDENTIFICADOR        	lowerChar 	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 2
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: contador : 1 : TipoNodo.IDENTIFICADOR        	contador  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: char : 2 : TipoNodo.IDENTIFICADOR        	char      	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: lowerChar : 2 : TipoNodo.IDENTIFICADOR        	lowerChar 	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: isConsonante : 2 : TipoNodo.IDENTIFICADOR        	isConsonante	
+	                                      	
+	                                      	
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 2
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: contador : 1 : TipoNodo.IDENTIFICADOR        	contador  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: char : 2 : TipoNodo.IDENTIFICADOR        	char      	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: lowerChar : 2 : TipoNodo.IDENTIFICADOR        	lowerChar 	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: isConsonante : 2 : TipoNodo.IDENTIFICADOR        	isConsonante	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 1
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: palabra : 1 : TipoNodo.IDENTIFICADOR        	palabra   	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+Registro: largoPalabra : 1 : TipoNodo.IDENTIFICADOR        	largoPalabra	
+	                                      	
+	Atributos:
+ {'tipo': <TipoNodo.FUNCION: 6>}       
+
+Registro: indice : 1 : TipoNodo.IDENTIFICADOR        	indice    	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+Registro: contador : 1 : TipoNodo.IDENTIFICADOR        	contador  	
+	                                      	
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	                                      	
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+
+------------------- TABLA DE SÍMBOLOS -----------------------------
+
+Profundidad: 0
+
+Registro: champiñon : 0 : TipoNodo.FUNCION              	champiñon 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: moneda : 0 : TipoNodo.FUNCION              	moneda    	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: estrella : 0 : TipoNodo.FUNCION              	estrella  	
+	{'tipo': <TipoDatos.NINGUNO: 7>}      
+	                                      	
+
+Registro: puntuacion : 0 : TipoNodo.FUNCION              	puntuacion	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: vidaExtra : 0 : TipoNodo.FUNCION              	vidaExtra 	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: florFuego : 0 : TipoNodo.FUNCION              	florFuego 	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: yoshi : 0 : TipoNodo.FUNCION              	yoshi     	
+	{'tipo': <TipoDatos.ENTERO: 3>}       
+	                                      	
+
+Registro: daisy : 0 : TipoNodo.FUNCION              	daisy     	
+	{'tipo': <TipoDatos.TEXTO: 1>}        
+	                                      	
+
+Registro: esConsonante : 0 : TipoNodo.FUNCION              	esConsonante	
+	{'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+Registro: cantidadConsonantes : 0 : TipoNodo.FUNCION              	cantidadConsonantes	
+	{'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}
+	Atributos:
+ {'tipo': <TipoDatos.NÚMERO: 2>}       
+	<TipoNodo.IDENTIFICADOR,TipoNodo.PARAMETROS_FUNCION,TipoNodo.BLOQUE_INSTRUCCIONES>
+
+
+ -------------------------------------------------- ARBOL DECORADO ----------------------------------------------- 
+
+
+ |
+ |
+ |_____TipoNodo.PROGRAMA             	           	 
+	 {'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0} 
+	                                       	 
+	 Hijos: < TipoNodo.FUNCION, TipoNodo.FUNCION, TipoNodo.PRINCIPAL >
+
+
+    |
+    |
+    |_____TipoNodo.FUNCION              	    Contenido:esConsonante	    
+	    {'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 0}    
+	    Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}     
+	    Hijos:    <    TipoNodo.IDENTIFICADOR,    TipoNodo.PARAMETROS_FUNCION,    TipoNodo.BLOQUE_INSTRUCCIONES    >
+
+
+        |
+        |
+        |_____TipoNodo.IDENTIFICADOR        	        Contenido:esConsonante	        
+	                                              	        
+	        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+        |
+        |
+        |_____TipoNodo.PARAMETROS_FUNCION   	                  	        
+	                                              	        
+	                                              	        
+	        Hijos:        <        TipoNodo.IDENTIFICADOR        >
+
+
+            |
+            |
+            |_____TipoNodo.IDENTIFICADOR        	            Contenido:caracter  	            
+	                                                  	            
+	            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+        |
+        |
+        |_____TipoNodo.BLOQUE_INSTRUCCIONES 	                  	        
+	        {'linea': 'mundo esConsonante [caracter] {\n', 'numeroLinea': 3, 'numeroColumna': 30}        
+	        Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}         
+	        Hijos:        <        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION        >
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    consonantes [ ? ] "bcdfghjklmnpqrstvwxyz" [ ; ]\n', 'numeroLinea': 4, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                   
+	            Hijos:            <            TipoNodo.ASIGNACION            >
+
+
+                |
+                |
+                |_____TipoNodo.ASIGNACION           	                          	                
+	                {'linea': '    consonantes [ ? ] "bcdfghjklmnpqrstvwxyz" [ ; ]\n', 'numeroLinea': 4, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR,                TipoNodo.EXPRESION_MATEMATICA                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:consonantes	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                    |
+                    |
+                    |_____TipoNodo.EXPRESION_MATEMATICA 	                              	                    
+	                    {'linea': '    consonantes [ ? ] "bcdfghjklmnpqrstvwxyz" [ ; ]\n', 'numeroLinea': 4, 'numeroColumna': 22}                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                           
+	                    Hijos:                    <                    TipoNodo.TEXTO                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.TEXTO                	                        Contenido:"bcdfghjklmnpqrstvwxyz"	                        
+	                                                              	                        
+	                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    cantCons [ ? ] ir a mundo puntuacion[consonantes] [ ; ]\n', 'numeroLinea': 6, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                   
+	            Hijos:            <            TipoNodo.ASIGNACION            >
+
+
+                |
+                |
+                |_____TipoNodo.ASIGNACION           	                          	                
+	                {'linea': '    cantCons [ ? ] ir a mundo puntuacion[consonantes] [ ; ]\n', 'numeroLinea': 6, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR,                TipoNodo.INVOCACION                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:cantCons  	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+                    |
+                    |
+                    |_____TipoNodo.INVOCACION           	                              	                    
+	                    {'linea': '    cantCons [ ? ] ir a mundo puntuacion[consonantes] [ ; ]\n', 'numeroLinea': 6, 'numeroColumna': 19}                    
+	                    Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                           
+	                    Hijos:                    <                    TipoNodo.IDENTIFICADOR,                    TipoNodo.PARAMETROS_INVOCACION                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.IDENTIFICADOR        	                        Contenido:puntuacion	                        
+	                                                              	                        
+	                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                        |
+                        |
+                        |_____TipoNodo.PARAMETROS_INVOCACION	                                  	                        
+	                        {'linea': '    cantCons [ ? ] ir a mundo puntuacion[consonantes] [ ; ]\n', 'numeroLinea': 6, 'numeroColumna': 41}                        
+	                                                              	                        
+	                        Hijos:                        <                        TipoNodo.IDENTIFICADOR                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.IDENTIFICADOR        	                            Contenido:consonantes	                            
+	                                                                  	                            
+	                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    indice [ ? ] 0 [ ; ]\n', 'numeroLinea': 7, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                   
+	            Hijos:            <            TipoNodo.ASIGNACION            >
+
+
+                |
+                |
+                |_____TipoNodo.ASIGNACION           	                          	                
+	                {'linea': '    indice [ ? ] 0 [ ; ]\n', 'numeroLinea': 7, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR,                TipoNodo.EXPRESION_MATEMATICA                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:indice    	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                    |
+                    |
+                    |_____TipoNodo.EXPRESION_MATEMATICA 	                              	                    
+	                    {'linea': '    indice [ ? ] 0 [ ; ]\n', 'numeroLinea': 7, 'numeroColumna': 17}                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                           
+	                    Hijos:                    <                    TipoNodo.ENTERO                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.ENTERO               	                        Contenido:0         	                        
+	                                                              	                        
+	                        Atributos:{'tipo': <TipoDatos.ENTERO: 3>}       
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    minijuego [indice [ -- ] cantCons] {\n', 'numeroLinea': 9, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoNodo.BLOQUE_INSTRUCCIONES: 22>}            
+	            Hijos:            <            TipoNodo.REPETICION            >
+
+
+                |
+                |
+                |_____TipoNodo.REPETICION           	                          	                
+	                {'linea': '    minijuego [indice [ -- ] cantCons] {\n', 'numeroLinea': 9, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoNodo.BLOQUE_INSTRUCCIONES: 22>}                
+	                Hijos:                <                TipoNodo.BLOQUE_CONDICIONES,                TipoNodo.BLOQUE_INSTRUCCIONES                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.BLOQUE_CONDICIONES   	                              	                    
+	                    {'linea': '    minijuego [indice [ -- ] cantCons] {\n', 'numeroLinea': 9, 'numeroColumna': 15}                    
+	                    Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                     
+	                    Hijos:                    <                    TipoNodo.CONDICION                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.CONDICION            	                                  	                        
+	                        {'linea': '    minijuego [indice [ -- ] cantCons] {\n', 'numeroLinea': 9, 'numeroColumna': 15}                        
+	                        Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                         
+	                        Hijos:                        <                        TipoNodo.COMPARACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.COMPARACION          	                                      	                            
+	                            {'linea': '    minijuego [indice [ -- ] cantCons] {\n', 'numeroLinea': 9, 'numeroColumna': 15}                            
+	                            Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                             
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.COMPARADOR,                            TipoNodo.IDENTIFICADOR                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:indice    	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                |
+                                |
+                                |_____TipoNodo.COMPARADOR           	                                Contenido:[ -- ]    	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:cantCons  	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                    |
+                    |
+                    |_____TipoNodo.BLOQUE_INSTRUCCIONES 	                              	                    
+	                    {'linea': '    minijuego [indice [ -- ] cantCons] {\n', 'numeroLinea': 9, 'numeroColumna': 39}                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                           
+	                    Hijos:                    <                    TipoNodo.INSTRUCCION,                    TipoNodo.INSTRUCCION,                    TipoNodo.INSTRUCCION                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        consonanteActual [ ? ] ir a mundo moneda[consonantes, indice] [ ; ]\n', 'numeroLinea': 10, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                               
+	                        Hijos:                        <                        TipoNodo.ASIGNACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.ASIGNACION           	                                      	                            
+	                            {'linea': '        consonanteActual [ ? ] ir a mundo moneda[consonantes, indice] [ ; ]\n', 'numeroLinea': 10, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                   
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.INVOCACION                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:consonanteActual	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+                                |
+                                |
+                                |_____TipoNodo.INVOCACION           	                                          	                                
+	                                {'linea': '        consonanteActual [ ? ] ir a mundo moneda[consonantes, indice] [ ; ]\n', 'numeroLinea': 10, 'numeroColumna': 31}                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                       
+	                                Hijos:                                <                                TipoNodo.IDENTIFICADOR,                                TipoNodo.PARAMETROS_INVOCACION                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.IDENTIFICADOR        	                                    Contenido:moneda    	                                    
+	                                                                          	                                    
+	                                    Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.PARAMETROS_INVOCACION	                                              	                                    
+	                                    {'linea': '        consonanteActual [ ? ] ir a mundo moneda[consonantes, indice] [ ; ]\n', 'numeroLinea': 10, 'numeroColumna': 49}                                    
+	                                                                          	                                    
+	                                    Hijos:                                    <                                    TipoNodo.IDENTIFICADOR,                                    TipoNodo.IDENTIFICADOR                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.IDENTIFICADOR        	                                        Contenido:consonantes	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.IDENTIFICADOR        	                                        Contenido:indice    	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        nivel [consonanteActual  [ <> ] caracter] {\n', 'numeroLinea': 11, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}                           
+	                        Hijos:                        <                        TipoNodo.BIFURCACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.BIFURCACION          	                                      	                            
+	                            {'linea': '        nivel [consonanteActual  [ <> ] caracter] {\n', 'numeroLinea': 11, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}                               
+	                            Hijos:                            <                            TipoNodo.SI                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.SI                   	                                          	                                
+	                                {'linea': '        nivel [consonanteActual  [ <> ] caracter] {\n', 'numeroLinea': 11, 'numeroColumna': 8}                                
+	                                Atributos:{'tipo': <TipoNodo.BLOQUE_INSTRUCCIONES: 22>}                                
+	                                Hijos:                                <                                TipoNodo.BLOQUE_CONDICIONES,                                TipoNodo.BLOQUE_INSTRUCCIONES                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.BLOQUE_CONDICIONES   	                                              	                                    
+	                                    {'linea': '        nivel [consonanteActual  [ <> ] caracter] {\n', 'numeroLinea': 11, 'numeroColumna': 15}                                    
+	                                    Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                     
+	                                    Hijos:                                    <                                    TipoNodo.CONDICION                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.CONDICION            	                                                  	                                        
+	                                        {'linea': '        nivel [consonanteActual  [ <> ] caracter] {\n', 'numeroLinea': 11, 'numeroColumna': 15}                                        
+	                                        Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                         
+	                                        Hijos:                                        <                                        TipoNodo.COMPARACION                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.COMPARACION          	                                                      	                                            
+	                                            {'linea': '        nivel [consonanteActual  [ <> ] caracter] {\n', 'numeroLinea': 11, 'numeroColumna': 15}                                            
+	                                            Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                             
+	                                            Hijos:                                            <                                            TipoNodo.IDENTIFICADOR,                                            TipoNodo.COMPARADOR,                                            TipoNodo.IDENTIFICADOR                                            >
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.IDENTIFICADOR        	                                                Contenido:consonanteActual	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.COMPARADOR           	                                                Contenido:[ <> ]    	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.IDENTIFICADOR        	                                                Contenido:caracter  	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.BLOQUE_INSTRUCCIONES 	                                              	                                    
+	                                    {'linea': '        nivel [consonanteActual  [ <> ] caracter] {\n', 'numeroLinea': 11, 'numeroColumna': 50}                                    
+	                                    Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                     
+	                                    Hijos:                                    <                                    TipoNodo.INSTRUCCION                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.INSTRUCCION          	                                                  	                                        
+	                                        {'linea': '            bandera peach [ ; ]\n', 'numeroLinea': 12, 'numeroColumna': 12}                                        
+	                                        Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                         
+	                                        Hijos:                                        <                                        TipoNodo.RETORNO                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.RETORNO              	                                                      	                                            
+	                                            {'linea': '            bandera peach [ ; ]\n', 'numeroLinea': 12, 'numeroColumna': 12}                                            
+	                                            Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                             
+	                                            Hijos:                                            <                                            TipoNodo.VALOR_BOOLEANO                                            >
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.VALOR_BOOLEANO       	                                                Contenido:peach     	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 14, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                               
+	                        Hijos:                        <                        TipoNodo.ASIGNACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.ASIGNACION           	                                      	                            
+	                            {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 14, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                   
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.EXPRESION_MATEMATICA                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:indice    	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                                |
+                                |
+                                |_____TipoNodo.EXPRESION_MATEMATICA 	                                          	                                
+	                                {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 14, 'numeroColumna': 15}                                
+	                                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                       
+	                                Hijos:                                <                                TipoNodo.EXPRESION                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.EXPRESION            	                                              	                                    
+	                                    {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 14, 'numeroColumna': 8}                                    
+	                                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                           
+	                                    Hijos:                                    <                                    TipoNodo.EXPRESION_MATEMATICA,                                    TipoNodo.OPERADOR,                                    TipoNodo.EXPRESION_MATEMATICA                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.EXPRESION_MATEMATICA 	                                                  	                                        
+	                                        {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 14, 'numeroColumna': 8}                                        
+	                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                               
+	                                        Hijos:                                        <                                        TipoNodo.IDENTIFICADOR                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.IDENTIFICADOR        	                                            Contenido:indice    	                                            
+	                                                                                  	                                            
+	                                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.OPERADOR             	                                        Contenido:[ + ]     	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.EXPRESION_MATEMATICA 	                                                  	                                        
+	                                        {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 14, 'numeroColumna': 35}                                        
+	                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                               
+	                                        Hijos:                                        <                                        TipoNodo.ENTERO                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.ENTERO               	                                            Contenido:1         	                                            
+	                                                                                  	                                            
+	                                            Atributos:{'tipo': <TipoDatos.ENTERO: 3>}       
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    bandera bowser [ ; ]\n', 'numeroLinea': 17, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}             
+	            Hijos:            <            TipoNodo.RETORNO            >
+
+
+                |
+                |
+                |_____TipoNodo.RETORNO              	                          	                
+	                {'linea': '    bandera bowser [ ; ]\n', 'numeroLinea': 17, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                 
+	                Hijos:                <                TipoNodo.VALOR_BOOLEANO                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.VALOR_BOOLEANO       	                    Contenido:bowser    	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+
+
+    |
+    |
+    |_____TipoNodo.FUNCION              	    Contenido:cantidadConsonantes	    
+	    {'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 0}    
+	    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}           
+	    Hijos:    <    TipoNodo.IDENTIFICADOR,    TipoNodo.PARAMETROS_FUNCION,    TipoNodo.BLOQUE_INSTRUCCIONES    >
+
+
+        |
+        |
+        |_____TipoNodo.IDENTIFICADOR        	        Contenido:cantidadConsonantes	        
+	                                              	        
+	        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+        |
+        |
+        |_____TipoNodo.PARAMETROS_FUNCION   	                  	        
+	                                              	        
+	                                              	        
+	        Hijos:        <        TipoNodo.IDENTIFICADOR        >
+
+
+            |
+            |
+            |_____TipoNodo.IDENTIFICADOR        	            Contenido:palabra   	            
+	                                                  	            
+	            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+        |
+        |
+        |_____TipoNodo.BLOQUE_INSTRUCCIONES 	                  	        
+	        {'linea': 'mundo cantidadConsonantes [palabra] {\n', 'numeroLinea': 21, 'numeroColumna': 36}        
+	        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}               
+	        Hijos:        <        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION,        TipoNodo.INSTRUCCION        >
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]\n', 'numeroLinea': 22, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                   
+	            Hijos:            <            TipoNodo.ASIGNACION            >
+
+
+                |
+                |
+                |_____TipoNodo.ASIGNACION           	                          	                
+	                {'linea': '    largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]\n', 'numeroLinea': 22, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR,                TipoNodo.INVOCACION                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:largoPalabra	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+                    |
+                    |
+                    |_____TipoNodo.INVOCACION           	                              	                    
+	                    {'linea': '    largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]\n', 'numeroLinea': 22, 'numeroColumna': 23}                    
+	                    Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                           
+	                    Hijos:                    <                    TipoNodo.IDENTIFICADOR,                    TipoNodo.PARAMETROS_INVOCACION                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.IDENTIFICADOR        	                        Contenido:puntuacion	                        
+	                                                              	                        
+	                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                        |
+                        |
+                        |_____TipoNodo.PARAMETROS_INVOCACION	                                  	                        
+	                        {'linea': '    largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]\n', 'numeroLinea': 22, 'numeroColumna': 45}                        
+	                                                              	                        
+	                        Hijos:                        <                        TipoNodo.IDENTIFICADOR                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.IDENTIFICADOR        	                            Contenido:palabra   	                            
+	                                                                  	                            
+	                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    indice [ ? ] 0 [ ; ]\n', 'numeroLinea': 23, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                   
+	            Hijos:            <            TipoNodo.ASIGNACION            >
+
+
+                |
+                |
+                |_____TipoNodo.ASIGNACION           	                          	                
+	                {'linea': '    indice [ ? ] 0 [ ; ]\n', 'numeroLinea': 23, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR,                TipoNodo.EXPRESION_MATEMATICA                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:indice    	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                    |
+                    |
+                    |_____TipoNodo.EXPRESION_MATEMATICA 	                              	                    
+	                    {'linea': '    indice [ ? ] 0 [ ; ]\n', 'numeroLinea': 23, 'numeroColumna': 17}                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                           
+	                    Hijos:                    <                    TipoNodo.ENTERO                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.ENTERO               	                        Contenido:0         	                        
+	                                                              	                        
+	                        Atributos:{'tipo': <TipoDatos.ENTERO: 3>}       
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    contador [ ? ] 0 [ ; ]\n', 'numeroLinea': 24, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                   
+	            Hijos:            <            TipoNodo.ASIGNACION            >
+
+
+                |
+                |
+                |_____TipoNodo.ASIGNACION           	                          	                
+	                {'linea': '    contador [ ? ] 0 [ ; ]\n', 'numeroLinea': 24, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR,                TipoNodo.EXPRESION_MATEMATICA                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:contador  	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                    |
+                    |
+                    |_____TipoNodo.EXPRESION_MATEMATICA 	                              	                    
+	                    {'linea': '    contador [ ? ] 0 [ ; ]\n', 'numeroLinea': 24, 'numeroColumna': 19}                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                           
+	                    Hijos:                    <                    TipoNodo.ENTERO                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.ENTERO               	                        Contenido:0         	                        
+	                                                              	                        
+	                        Atributos:{'tipo': <TipoDatos.ENTERO: 3>}       
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    minijuego [indice [ -- ] largoPalabra] {\n', 'numeroLinea': 25, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoNodo.BLOQUE_INSTRUCCIONES: 22>}            
+	            Hijos:            <            TipoNodo.REPETICION            >
+
+
+                |
+                |
+                |_____TipoNodo.REPETICION           	                          	                
+	                {'linea': '    minijuego [indice [ -- ] largoPalabra] {\n', 'numeroLinea': 25, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoNodo.BLOQUE_INSTRUCCIONES: 22>}                
+	                Hijos:                <                TipoNodo.BLOQUE_CONDICIONES,                TipoNodo.BLOQUE_INSTRUCCIONES                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.BLOQUE_CONDICIONES   	                              	                    
+	                    {'linea': '    minijuego [indice [ -- ] largoPalabra] {\n', 'numeroLinea': 25, 'numeroColumna': 15}                    
+	                    Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                     
+	                    Hijos:                    <                    TipoNodo.CONDICION                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.CONDICION            	                                  	                        
+	                        {'linea': '    minijuego [indice [ -- ] largoPalabra] {\n', 'numeroLinea': 25, 'numeroColumna': 15}                        
+	                        Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                         
+	                        Hijos:                        <                        TipoNodo.COMPARACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.COMPARACION          	                                      	                            
+	                            {'linea': '    minijuego [indice [ -- ] largoPalabra] {\n', 'numeroLinea': 25, 'numeroColumna': 15}                            
+	                            Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                             
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.COMPARADOR,                            TipoNodo.IDENTIFICADOR                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:indice    	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                |
+                                |
+                                |_____TipoNodo.COMPARADOR           	                                Contenido:[ -- ]    	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:largoPalabra	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                    |
+                    |
+                    |_____TipoNodo.BLOQUE_INSTRUCCIONES 	                              	                    
+	                    {'linea': '    minijuego [indice [ -- ] largoPalabra] {\n', 'numeroLinea': 25, 'numeroColumna': 43}                    
+	                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                           
+	                    Hijos:                    <                    TipoNodo.INSTRUCCION,                    TipoNodo.INSTRUCCION,                    TipoNodo.INSTRUCCION,                    TipoNodo.INSTRUCCION,                    TipoNodo.INSTRUCCION                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]\n', 'numeroLinea': 26, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                               
+	                        Hijos:                        <                        TipoNodo.ASIGNACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.ASIGNACION           	                                      	                            
+	                            {'linea': '        char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]\n', 'numeroLinea': 26, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                   
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.INVOCACION                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:char      	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+                                |
+                                |
+                                |_____TipoNodo.INVOCACION           	                                          	                                
+	                                {'linea': '        char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]\n', 'numeroLinea': 26, 'numeroColumna': 19}                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                       
+	                                Hijos:                                <                                TipoNodo.IDENTIFICADOR,                                TipoNodo.PARAMETROS_INVOCACION                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.IDENTIFICADOR        	                                    Contenido:moneda    	                                    
+	                                                                          	                                    
+	                                    Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.PARAMETROS_INVOCACION	                                              	                                    
+	                                    {'linea': '        char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]\n', 'numeroLinea': 26, 'numeroColumna': 37}                                    
+	                                                                          	                                    
+	                                    Hijos:                                    <                                    TipoNodo.IDENTIFICADOR,                                    TipoNodo.IDENTIFICADOR                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.IDENTIFICADOR        	                                        Contenido:palabra   	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.IDENTIFICADOR        	                                        Contenido:indice    	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        lowerChar [ ? ] ir a mundo daisy[char] [ ; ]\n', 'numeroLinea': 27, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                               
+	                        Hijos:                        <                        TipoNodo.ASIGNACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.ASIGNACION           	                                      	                            
+	                            {'linea': '        lowerChar [ ? ] ir a mundo daisy[char] [ ; ]\n', 'numeroLinea': 27, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                   
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.INVOCACION                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:lowerChar 	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+                                |
+                                |
+                                |_____TipoNodo.INVOCACION           	                                          	                                
+	                                {'linea': '        lowerChar [ ? ] ir a mundo daisy[char] [ ; ]\n', 'numeroLinea': 27, 'numeroColumna': 24}                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                       
+	                                Hijos:                                <                                TipoNodo.IDENTIFICADOR,                                TipoNodo.PARAMETROS_INVOCACION                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.IDENTIFICADOR        	                                    Contenido:daisy     	                                    
+	                                                                          	                                    
+	                                    Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.PARAMETROS_INVOCACION	                                              	                                    
+	                                    {'linea': '        lowerChar [ ? ] ir a mundo daisy[char] [ ; ]\n', 'numeroLinea': 27, 'numeroColumna': 41}                                    
+	                                                                          	                                    
+	                                    Hijos:                                    <                                    TipoNodo.IDENTIFICADOR                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.IDENTIFICADOR        	                                        Contenido:char      	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        isConsonante [ ? ] ir a mundo esConsonante[lowerChar] [ ; ]\n', 'numeroLinea': 28, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                               
+	                        Hijos:                        <                        TipoNodo.ASIGNACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.ASIGNACION           	                                      	                            
+	                            {'linea': '        isConsonante [ ? ] ir a mundo esConsonante[lowerChar] [ ; ]\n', 'numeroLinea': 28, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                   
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.INVOCACION                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:isConsonante	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}       
+
+
+                                |
+                                |
+                                |_____TipoNodo.INVOCACION           	                                          	                                
+	                                {'linea': '        isConsonante [ ? ] ir a mundo esConsonante[lowerChar] [ ; ]\n', 'numeroLinea': 28, 'numeroColumna': 27}                                
+	                                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                                       
+	                                Hijos:                                <                                TipoNodo.IDENTIFICADOR,                                TipoNodo.PARAMETROS_INVOCACION                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.IDENTIFICADOR        	                                    Contenido:esConsonante	                                    
+	                                                                          	                                    
+	                                    Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.PARAMETROS_INVOCACION	                                              	                                    
+	                                    {'linea': '        isConsonante [ ? ] ir a mundo esConsonante[lowerChar] [ ; ]\n', 'numeroLinea': 28, 'numeroColumna': 51}                                    
+	                                                                          	                                    
+	                                    Hijos:                                    <                                    TipoNodo.IDENTIFICADOR                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.IDENTIFICADOR        	                                        Contenido:lowerChar 	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        nivel [ isConsonante [ <> ] peach] {\n', 'numeroLinea': 29, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}                           
+	                        Hijos:                        <                        TipoNodo.BIFURCACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.BIFURCACION          	                                      	                            
+	                            {'linea': '        nivel [ isConsonante [ <> ] peach] {\n', 'numeroLinea': 29, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}                               
+	                            Hijos:                            <                            TipoNodo.SI                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.SI                   	                                          	                                
+	                                {'linea': '        nivel [ isConsonante [ <> ] peach] {\n', 'numeroLinea': 29, 'numeroColumna': 8}                                
+	                                Atributos:{'tipo': <TipoNodo.BLOQUE_INSTRUCCIONES: 22>}                                
+	                                Hijos:                                <                                TipoNodo.BLOQUE_CONDICIONES,                                TipoNodo.BLOQUE_INSTRUCCIONES                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.BLOQUE_CONDICIONES   	                                              	                                    
+	                                    {'linea': '        nivel [ isConsonante [ <> ] peach] {\n', 'numeroLinea': 29, 'numeroColumna': 16}                                    
+	                                    Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                     
+	                                    Hijos:                                    <                                    TipoNodo.CONDICION                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.CONDICION            	                                                  	                                        
+	                                        {'linea': '        nivel [ isConsonante [ <> ] peach] {\n', 'numeroLinea': 29, 'numeroColumna': 16}                                        
+	                                        Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>}                                         
+	                                        Hijos:                                        <                                        TipoNodo.COMPARACION                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.COMPARACION          	                                                      	                                            
+	                                            {'linea': '        nivel [ isConsonante [ <> ] peach] {\n', 'numeroLinea': 29, 'numeroColumna': 16}                                            
+	                                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}                                               
+	                                            Hijos:                                            <                                            TipoNodo.IDENTIFICADOR,                                            TipoNodo.COMPARADOR,                                            TipoNodo.VALOR_BOOLEANO                                            >
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.IDENTIFICADOR        	                                                Contenido:isConsonante	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.COMPARADOR           	                                                Contenido:[ <> ]    	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.VALOR_BOOLEANO       	                                                Contenido:peach     	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.VALOR_VERDAD: 5>} 
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.BLOQUE_INSTRUCCIONES 	                                              	                                    
+	                                    {'linea': '        nivel [ isConsonante [ <> ] peach] {\n', 'numeroLinea': 29, 'numeroColumna': 43}                                    
+	                                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                           
+	                                    Hijos:                                    <                                    TipoNodo.INSTRUCCION                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.INSTRUCCION          	                                                  	                                        
+	                                        {'linea': '            contador [ ? ] [contador [ + ] 1] [ ; ]\n', 'numeroLinea': 30, 'numeroColumna': 12}                                        
+	                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                               
+	                                        Hijos:                                        <                                        TipoNodo.ASIGNACION                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.ASIGNACION           	                                                      	                                            
+	                                            {'linea': '            contador [ ? ] [contador [ + ] 1] [ ; ]\n', 'numeroLinea': 30, 'numeroColumna': 12}                                            
+	                                            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                                   
+	                                            Hijos:                                            <                                            TipoNodo.IDENTIFICADOR,                                            TipoNodo.EXPRESION_MATEMATICA                                            >
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.IDENTIFICADOR        	                                                Contenido:contador  	                                                
+	                                                                                      	                                                
+	                                                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                                                |
+                                                |
+                                                |_____TipoNodo.EXPRESION_MATEMATICA 	                                                          	                                                
+	                                                {'linea': '            contador [ ? ] [contador [ + ] 1] [ ; ]\n', 'numeroLinea': 30, 'numeroColumna': 21}                                                
+	                                                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                                       
+	                                                Hijos:                                                <                                                TipoNodo.EXPRESION                                                >
+
+
+                                                    |
+                                                    |
+                                                    |_____TipoNodo.EXPRESION            	                                                              	                                                    
+	                                                    {'linea': '            contador [ ? ] [contador [ + ] 1] [ ; ]\n', 'numeroLinea': 30, 'numeroColumna': 12}                                                    
+	                                                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                                           
+	                                                    Hijos:                                                    <                                                    TipoNodo.EXPRESION_MATEMATICA,                                                    TipoNodo.OPERADOR,                                                    TipoNodo.EXPRESION_MATEMATICA                                                    >
+
+
+                                                        |
+                                                        |
+                                                        |_____TipoNodo.EXPRESION_MATEMATICA 	                                                                  	                                                        
+	                                                        {'linea': '            contador [ ? ] [contador [ + ] 1] [ ; ]\n', 'numeroLinea': 30, 'numeroColumna': 12}                                                        
+	                                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                                               
+	                                                        Hijos:                                                        <                                                        TipoNodo.IDENTIFICADOR                                                        >
+
+
+                                                            |
+                                                            |
+                                                            |_____TipoNodo.IDENTIFICADOR        	                                                            Contenido:contador  	                                                            
+	                                                                                                  	                                                            
+	                                                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                                        |
+                                                        |
+                                                        |_____TipoNodo.OPERADOR             	                                                        Contenido:[ + ]     	                                                        
+	                                                                                              	                                                        
+	                                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                                                        |
+                                                        |
+                                                        |_____TipoNodo.EXPRESION_MATEMATICA 	                                                                  	                                                        
+	                                                        {'linea': '            contador [ ? ] [contador [ + ] 1] [ ; ]\n', 'numeroLinea': 30, 'numeroColumna': 43}                                                        
+	                                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                                               
+	                                                        Hijos:                                                        <                                                        TipoNodo.ENTERO                                                        >
+
+
+                                                            |
+                                                            |
+                                                            |_____TipoNodo.ENTERO               	                                                            Contenido:1         	                                                            
+	                                                                                                  	                                                            
+	                                                            Atributos:{'tipo': <TipoDatos.ENTERO: 3>}       
+
+
+                        |
+                        |
+                        |_____TipoNodo.INSTRUCCION          	                                  	                        
+	                        {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 32, 'numeroColumna': 8}                        
+	                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                               
+	                        Hijos:                        <                        TipoNodo.ASIGNACION                        >
+
+
+                            |
+                            |
+                            |_____TipoNodo.ASIGNACION           	                                      	                            
+	                            {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 32, 'numeroColumna': 8}                            
+	                            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                   
+	                            Hijos:                            <                            TipoNodo.IDENTIFICADOR,                            TipoNodo.EXPRESION_MATEMATICA                            >
+
+
+                                |
+                                |
+                                |_____TipoNodo.IDENTIFICADOR        	                                Contenido:indice    	                                
+	                                                                      	                                
+	                                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                                |
+                                |
+                                |_____TipoNodo.EXPRESION_MATEMATICA 	                                          	                                
+	                                {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 32, 'numeroColumna': 15}                                
+	                                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                       
+	                                Hijos:                                <                                TipoNodo.EXPRESION                                >
+
+
+                                    |
+                                    |
+                                    |_____TipoNodo.EXPRESION            	                                              	                                    
+	                                    {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 32, 'numeroColumna': 8}                                    
+	                                    Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                           
+	                                    Hijos:                                    <                                    TipoNodo.EXPRESION_MATEMATICA,                                    TipoNodo.OPERADOR,                                    TipoNodo.EXPRESION_MATEMATICA                                    >
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.EXPRESION_MATEMATICA 	                                                  	                                        
+	                                        {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 32, 'numeroColumna': 8}                                        
+	                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                               
+	                                        Hijos:                                        <                                        TipoNodo.IDENTIFICADOR                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.IDENTIFICADOR        	                                            Contenido:indice    	                                            
+	                                                                                  	                                            
+	                                            Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.OPERADOR             	                                        Contenido:[ + ]     	                                        
+	                                                                              	                                        
+	                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+
+                                        |
+                                        |
+                                        |_____TipoNodo.EXPRESION_MATEMATICA 	                                                  	                                        
+	                                        {'linea': '        indice [ ? ] [indice [ + ] 1] [ ; ]\n', 'numeroLinea': 32, 'numeroColumna': 35}                                        
+	                                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                                               
+	                                        Hijos:                                        <                                        TipoNodo.ENTERO                                        >
+
+
+                                            |
+                                            |
+                                            |_____TipoNodo.ENTERO               	                                            Contenido:1         	                                            
+	                                                                                  	                                            
+	                                            Atributos:{'tipo': <TipoDatos.ENTERO: 3>}       
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    bandera contador [ ; ]\n', 'numeroLinea': 34, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                   
+	            Hijos:            <            TipoNodo.RETORNO            >
+
+
+                |
+                |
+                |_____TipoNodo.RETORNO              	                          	                
+	                {'linea': '    bandera contador [ ; ]\n', 'numeroLinea': 34, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:contador  	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+    |
+    |
+    |_____TipoNodo.PRINCIPAL            	              	    
+	    {'linea': 'juego {\n', 'numeroLinea': 37, 'numeroColumna': 0}    
+	    Atributos:{'tipo': <TipoNodo.FUNCION: 6>}           
+	    Hijos:    <    TipoNodo.BLOQUE_INSTRUCCIONES    >
+
+
+        |
+        |
+        |_____TipoNodo.BLOQUE_INSTRUCCIONES 	                  	        
+	        {'linea': 'juego {\n', 'numeroLinea': 37, 'numeroColumna': 6}        
+	        Atributos:{'tipo': <TipoNodo.FUNCION: 6>}               
+	        Hijos:        <        TipoNodo.INSTRUCCION        >
+
+
+            |
+            |
+            |_____TipoNodo.INSTRUCCION          	                      	            
+	            {'linea': '    ir a mundo cantidadConsonantes ["palabra"] [ ; ]\n', 'numeroLinea': 38, 'numeroColumna': 4}            
+	            Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                   
+	            Hijos:            <            TipoNodo.INVOCACION            >
+
+
+                |
+                |
+                |_____TipoNodo.INVOCACION           	                          	                
+	                {'linea': '    ir a mundo cantidadConsonantes ["palabra"] [ ; ]\n', 'numeroLinea': 38, 'numeroColumna': 4}                
+	                Atributos:{'tipo': <TipoNodo.FUNCION: 6>}                       
+	                Hijos:                <                TipoNodo.IDENTIFICADOR,                TipoNodo.PARAMETROS_INVOCACION                >
+
+
+                    |
+                    |
+                    |_____TipoNodo.IDENTIFICADOR        	                    Contenido:cantidadConsonantes	                    
+	                                                          	                    
+	                    Atributos:{'tipo': <TipoDatos.CUALQUIERA: 6>}   
+
+
+                    |
+                    |
+                    |_____TipoNodo.PARAMETROS_INVOCACION	                              	                    
+	                    {'linea': '    ir a mundo cantidadConsonantes ["palabra"] [ ; ]\n', 'numeroLinea': 38, 'numeroColumna': 36}                    
+	                                                          	                    
+	                    Hijos:                    <                    TipoNodo.TEXTO                    >
+
+
+                        |
+                        |
+                        |_____TipoNodo.TEXTO                	                        Contenido:"palabra" 	                        
+	                                                              	                        
+	                        Atributos:{'tipo': <TipoDatos.NÚMERO: 2>}       
+
+

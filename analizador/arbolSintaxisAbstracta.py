@@ -70,9 +70,17 @@ class NodoASA:
         else:
             resultado += '{:38}\t'.format('')
 
+        resultado += '\n\t'
+        if self.atributos != {}:
+            resultado += "Atributos:\n "
+            resultado += '{:38}'.format(str(self.atributos))
+        else:
+            resultado += '{:38}\t'.format('')
+
         if self.nodos != []:
             resultado += '\n\t'
             resultado += '<'
+            
 
             # Imprime los tipos de los nodos del nivel siguiente
             for nodo in self.nodos[:-1]:
@@ -84,6 +92,51 @@ class NodoASA:
 
         return resultado
 
+    def toString(self, level):
+
+        """
+        Retorna un string del nodo con tabs en base al nivel del mismo en el arbol
+        """
+        tabs = "    "*level if level > 0 else " "
+
+        resultado =  tabs + "|\n"
+        resultado += tabs + "|\n"
+        # resultado += tabs + "|____"
+    
+        # Coloca la información del nodo
+        resultado += tabs + "|_____" + '{:30}\t'.format(self.tipo)
+        
+        if self.contenido is not None:
+            resultado += tabs + "Contenido:" + '{:10}\t'.format(self.contenido)
+        else:
+            resultado += tabs + '{:10}\t'.format('')
+
+        resultado += tabs + '\n\t'
+        if self.errorInfo != {}:
+            resultado += tabs + '{:38}'.format(str(self.errorInfo))
+        else:
+            resultado += tabs + '{:38}\t'.format('')
+
+        resultado += tabs + '\n\t'
+        if self.atributos != {}:
+            resultado += tabs + "Atributos:" + '{:38}'.format(str(self.atributos))
+        else:
+            resultado += tabs + '{:38}\t'.format('')
+
+        if self.nodos != []:
+            resultado += tabs + '\n\t'
+            resultado += tabs + 'Hijos:'+ tabs +'<'
+            
+
+            # Imprime los tipos de los nodos del nivel siguiente
+            for nodo in self.nodos[:-1]:
+                if nodo is not None:
+                    resultado += tabs +'{},'.format(nodo.tipo)
+
+            resultado += tabs +'{}'.format(self.nodos[-1].tipo)
+            resultado += tabs +'>'
+
+        return resultado
 
 class ArbolSintaxisAbstracta:
     """
@@ -92,11 +145,18 @@ class ArbolSintaxisAbstracta:
     raiz : NodoASA
 
     def imprimirPreorden(self):
-        self.__imprimirPreordenAux(self.raiz)
+        
+        f = open("salida.txt", "a")
+        print(" -------------------------------------------------- ARBOL DECORADO ----------------------------------------------- \n\n", file=f)
+        f.close()
+        self.__imprimirPreordenAux(self.raiz, 0)
 
-    def __imprimirPreordenAux(self, nodo):
-        print(nodo, end='\n\n\n')
+    def __imprimirPreordenAux(self, nodo, level):
+
+        f = open("salida.txt", "a")
+        print(nodo.toString(level), end='\n\n\n', file=f)
+        f.close()
 
         if nodo is not None:
             for nodoHijo in nodo.nodos:
-                self.__imprimirPreordenAux(nodoHijo)
+                self.__imprimirPreordenAux(nodoHijo, level + 1)

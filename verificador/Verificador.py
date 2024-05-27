@@ -26,6 +26,7 @@ class Verificador:
         """
             
         if self.asa.raiz is None:
+            
             print([])
         else:
             self.asa.imprimirPreorden()
@@ -42,8 +43,8 @@ class Verificador:
                 ('daisy', TipoDatos.TEXTO)]
 
         for nombre, tipo in  funcionesAmbienteEstandar:
-            nodo = NodoASA(TipoNodo.FUNCIÓN, contenido=nombre, errorInfo={'tipo': tipo})
-            self.tablaSimbolos.incluir(nombre, nodo)
+            nodo = NodoASA(TipoNodo.FUNCION, contenido=nombre, errorInfo={'tipo': tipo})
+            self.tablaSimbolos.incluir(nodo)
 
     def verificar(self):
         self.visitador.visitar(self.asa.raiz)

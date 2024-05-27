@@ -1,7 +1,8 @@
 from generador.generador import Generador
-from utils import cargarArchivo
+from utils.utils import cargarArchivo
 from explorador.explorador import Explorador
 from analizador.analizador import Analizador
+from verificador.Verificador import Verificador
 
 import argparse
 
@@ -52,7 +53,25 @@ def SuperPrograBros():
             analizador.imprimirArbol()
 
     elif args.verificador == True:
-        print("Error: No implementado")
+        archivo = cargarArchivo(args.archivo)
+
+        explorador = Explorador(archivo)
+        res_valida_explorador = explorador.explorar()
+        if (not res_valida_explorador):
+            return
+        analizador = Analizador(explorador.componentes)
+        analizador.analizar()
+        if not analizador.error:
+            # Limpia el archivo de salida
+            f = open("salida.txt", "w")
+            f.write("")
+            f.close()
+            
+            # Verificador
+            verificador = Verificador(analizador.asa)
+            verificador.verificar()
+
+            verificador.imprimirAsa()
 
     elif args.python == True:
         archivo = cargarArchivo(args.archivo)

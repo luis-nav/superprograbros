@@ -24,7 +24,7 @@ class Registro:
         return self.__referencia
     
     def __str__(self):
-        return f"Registro: " + self.__identificador + " : "+str(self.__nivel) +" : "+ self.__referencia + "\n"
+        return f"Registro: " + self.__identificador + " : "+str(self.__nivel) +" : "+ str(self.__referencia) + "\n"
     
 
 class TablaSimbolos:
@@ -44,14 +44,20 @@ class TablaSimbolos:
         Ingresa un registro arriba de la pila
         Solo se necesita como parametro el nodo de referencia
         """
-        registro = Registro(ref.contenido, self.nivelActual, ref)
-        self.simbolos.append(registro)
+        if not self.existe(ref.contenido):
+
+            registro = Registro(ref.contenido, self.nivelActual, ref)
+            self.simbolos.append(registro)
+
+            self.printInFile()
+        
     
     def extraer(self):
         """
         Retorna el registro al tope de la pila y lo elimina
         """
-        return self.simbolos.pop()
+        registro = self.simbolos.pop()
+        return registro
     
     def inspeccionar(self):
         """
@@ -96,12 +102,34 @@ class TablaSimbolos:
                 break
 
         self.nivelActual -= 1
+        self.printInFile()
+
+    def existe(self, identificador):
+        """
+        Verficia si un identificador existe cómo variable/función global o local
+        """
+        for registro in self.simbolos:
+
+            # si es local
+            if registro.obtenerIdentificador() == identificador and \
+                    registro.obtenerNivel() <= self.nivelActual:
+
+                return True
+
+        return False
 
 
+    def printInFile(self):
+        """
+        Imprime texto en un archivo de salida        
+        """
+        f = open("salida.txt", "a")
+        print(self, file=f)
+        f.close()
     
     def __str__(self):
-        toStr = "TABLA DE SÍMBOLOS\n\n"
-        toStr = "Profundidad: " + str(self.profundidad) +'\n\n'
+        toStr = "------------------- TABLA DE SÍMBOLOS -----------------------------\n\n"
+        toStr += "Profundidad: " + str(self.nivelActual) +'\n\n'
 
         for registro in self.simbolos:
             toStr += str(registro) + '\n'
