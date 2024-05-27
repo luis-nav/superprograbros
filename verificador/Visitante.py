@@ -15,6 +15,11 @@ class Visitante:
         """
         Es necesario ya que todos los nodos son del mismo tipo en el arbol
         """
+
+        # f = open("salida.txt", "a")
+        # print(self.tablaSimbolos, file=f)
+        # f.close()
+
         # -------------------- JOHN -------------------------
         if nodo.tipo is TipoNodo.PROGRAMA:
             self.__visitarPrograma(nodo)
@@ -168,7 +173,7 @@ class Visitante:
         # Verificacion del identificador de la funcion
         registro = self.tablaSimbolos.buscar(nodoActual.nodos[0].contenido)
 
-        if registro.obtenerReferencia().tipo != TipoNodo.FUNCIÓN:
+        if registro.obtenerReferencia().tipo != TipoNodo.FUNCION:
             raise Exception('Es una variable', registro)
 
         for nodo in nodoActual.nodos:
@@ -176,14 +181,14 @@ class Visitante:
 
         # El tipo resultado de la invocación es el tipo inferido de una
         # función previamente definida
-        nodoActual.atributos['tipo'] = registro.obtenerReferencia().atributos['tipo']
+        nodoActual.atributos['tipo'] = registro.obtenerReferencia().tipo
 
     def __visitarFuncion(self, nodoActual):
         """
         Funcion ::= mundo Identificador [ParametrosFunción](\n|\s)* BloqueInstrucciones
         """
         # Meto la función en la tabla de símbolos (IDENTIFICACIÓN)
-        self.tablaSimbolos.nuevo_registro(nodoActual)
+        self.tablaSimbolos.incluir(nodoActual)
 
         self.tablaSimbolos.iniciarBloque()
 
@@ -256,11 +261,14 @@ class Visitante:
 
         # Visita el bloque de instrucciones
         self.tablaSimbolos.iniciarBloque()
-        nodoActual.nodos[0].visitar(self)
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
         self.tablaSimbolos.cerrarBloque()
 
         # Guarda el tipo de retorno
-        nodoActual.atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+        nodoActual.atributos['tipo'] = nodoActual.nodos[1].tipo
     
     def __visitarBifurcacion(self, nodoActual):
         """
@@ -281,11 +289,14 @@ class Visitante:
 
         # Visita el bloque de instrucciones
         self.tablaSimbolos.iniciarBloque()
-        nodoActual.nodos[0].visitar(self)
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
         self.tablaSimbolos.cerrarBloque()
 
         # Guarda el tipo de retorno
-        nodoActual.atributos['tipo'] = nodoActual.nodos[1].atributos['tipo']
+        nodoActual.atributos['tipo'] = nodoActual.nodos[1].tipo
 
     def __visitarSiNo(self, nodoActual):
         """
@@ -293,7 +304,10 @@ class Visitante:
         """
         # Visita el bloque de instrucciones
         self.tablaSimbolos.iniciarBloque()
-        nodoActual.nodos[0].visitar(self)
+
+        for nodo in nodoActual.nodos:
+            nodo.visitar(self)
+
         self.tablaSimbolos.cerrarBloque()
 
         # Guarda el tipo de retorno
@@ -320,7 +334,7 @@ class Visitante:
                     registro = self.tablaSimbolos.buscar(nodo.contenido)
 
                     # Se le da a bandera el tipo de retorno del identificador encontrado
-                    nodoActual.atributos['tipo'] = registro['referencia'].atributos['tipo']
+                    nodoActual.atributos['tipo'] = registro.obtenerReferencia().atributos['tipo']
                 else:
                     # Verifica si es un Literal de que tipo es
                     nodoActual.atributos['tipo'] = nodo.atributos['tipo']
