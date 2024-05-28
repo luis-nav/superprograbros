@@ -82,9 +82,6 @@ class Visitante:
         # -------------------- Hytan  -------------------------
         elif nodo.tipo is TipoNodo.ERROR:
             self.__visitarError(nodo)
-            
-        elif nodo.tipo is TipoNodo.ASIGNADOR:
-            self.__visitarAsignador(nodo)
 
         elif nodo.tipo is TipoNodo.OPERADOR:
             self.__visitarOperador(nodo)
@@ -154,7 +151,7 @@ class Visitante:
             nodo.visitar(self)
 
         # Anoto el tipo de datos 'NÚMERO' (TIPO)
-        nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+        nodoActual.atributos['tipo'] = nodoActual.nodos[0].atributos['tipo']
 
     def __visitarExpresion(self, nodoActual):
         """
@@ -164,7 +161,18 @@ class Visitante:
             nodo.visitar(self)
 
         # Anoto el tipo de datos 'NÚMERO' (TIPO)
-        nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
+        if nodoActual.nodos[0].atributos['tipo'] != nodoActual.nodos[2].atributos['tipo'] \
+            and nodoActual.nodos[0].atributos['tipo'] != TipoDatos.CUALQUIERA \
+            and nodoActual.nodos[2].atributos['tipo'] != TipoDatos.CUALQUIERA:
+
+            raise Exception('Tipos de datos no pueden ser operados', nodoActual.nodos[0].atributos['tipo'], nodoActual.nodos[2].atributos['tipo'], nodoActual.errorInfo)
+        
+        
+        if nodoActual.nodos[0].atributos['tipo'] == TipoDatos.VALOR_VERDAD or nodoActual.nodos[2].atributos['tipo']  == TipoDatos.VALOR_VERDAD:
+            raise Exception('No se pueden tener valores booleanos en una expresion', nodoActual.errorInfo)
+        
+
+        nodoActual.atributos['tipo'] = nodoActual.nodos[0].atributos['tipo']
 
     def __visitarInvocacion(self, nodoActual):
         """
@@ -174,7 +182,7 @@ class Visitante:
         registro = self.tablaSimbolos.buscar(nodoActual.nodos[0].contenido)
 
         if registro.obtenerReferencia().tipo != TipoNodo.FUNCION:
-            raise Exception('Es una variable', registro)
+            raise Exception("\""+registro.obtenerIdentificador() + "\" es una variable no una función", nodoActual.errorInfo)
 
         for nodo in nodoActual.nodos:
             nodo.visitar(self)
@@ -221,9 +229,10 @@ class Visitante:
             if nodo.tipo == TipoNodo.IDENTIFICADOR:
                 registro = self.tablaSimbolos.buscar(nodo.contenido)
 
-            elif nodo.tipo == TipoNodo.FUNCION:
-                raise Exception('No se permitan funciones como parametros de invocacion de funcion', nodo.contenido) 
+                if registro.obtenerReferencia().tipo == TipoNodo.FUNCION:
+                    raise Exception('No se permitan funciones como parametros de invocacion de funcion', nodoActual.errorInfo) 
 
+                
             # Si son otra cosa, simplemente se visitan
             nodo.visitar(self)
 
@@ -392,7 +401,7 @@ class Visitante:
             comparador.atributos['tipo'] = TipoDatos.CUALQUIERA
             nodoActual.atributos['tipo'] = TipoDatos.CUALQUIERA
         else:
-            raise Exception('Error', str(nodoActual))
+            raise Exception('No se pueden comparar dos tipos diferentes', nodoActual.errorInfo)
     
     def __visitarOperadorBooleano(self, nodoActual):
         """
