@@ -84,6 +84,12 @@ def SuperPrograBros():
         analizador.analizar()
         if analizador.error:
             return
+        
+        # Verificador
+        verificador = Verificador(analizador.asa)
+        verificador.verificar()
+
+
         generador = Generador(analizador.asa)
         # Nombre y ubicacion del nuevo archivo
         indice = args.archivo.rfind(".")
