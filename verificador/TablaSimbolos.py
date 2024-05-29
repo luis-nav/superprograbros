@@ -135,16 +135,3 @@ class TablaSimbolos:
             toStr += str(registro) + '\n'
         
         return toStr
-
-    
-
-# mySymbols = TablaSimbolos()
-
-# mySymbols.incluir('a', 'refa')
-# mySymbols.incluir('b', 'refb')
-
-# print(mySymbols)
-
-# print(mySymbols.inspeccionar())
-    
-# print(mySymbols)
