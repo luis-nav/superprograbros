@@ -493,7 +493,7 @@ class Visitante:
         Identificador ::= [a-z][a-zA-Z0-9]+
         """
         nodoActual.atributos['tipo'] = TipoDatos.CUALQUIERA
-       
+
     def __visitarOperador(self, nodoActual):
         """
         Operador ::= ([ + ] | - ] | * ] | / ])
