@@ -8,7 +8,7 @@ class Visitante:
     tablaSimbolos: TablaSimbolos
 
     def __init__(self, nuevaTablaSimbolos):
-        # Creamos un visitante y visitamos el nodo de error
+
         self.tablaSimbolos = nuevaTablaSimbolos
 
     def visitar(self, nodo :NodoASA):
@@ -16,11 +16,6 @@ class Visitante:
         Es necesario ya que todos los nodos son del mismo tipo en el arbol
         """
 
-        # f = open("salida.txt", "a")
-        # print(self.tablaSimbolos, file=f)
-        # f.close()
-
-        # -------------------- JOHN -------------------------
         if nodo.tipo is TipoNodo.PROGRAMA:
             self.__visitarPrograma(nodo)
 
@@ -48,7 +43,6 @@ class Visitante:
         elif nodo.tipo is TipoNodo.INSTRUCCION:
             self.__visitarInstruccion(nodo)
 
-        # -------------------- Vicky  -------------------------
         elif nodo.tipo is TipoNodo.BLOQUE_INSTRUCCIONES:
             self.__visitarBloqueInstrucciones(nodo)
 
@@ -79,7 +73,6 @@ class Visitante:
         elif nodo.tipo is TipoNodo.OPERADOR_BOOLEANO:
             self.__visitarOperadorBooleano(nodo)
 
-        # -------------------- Hytan  -------------------------
         elif nodo.tipo is TipoNodo.ERROR:
             self.__visitarError(nodo)
 
@@ -116,9 +109,7 @@ class Visitante:
         Programa ::= ((Comentario | Asignacion | Funcion)(\n|\s)*)* Principal
         """
         for nodo in nodoActual.nodos:
-            # acá 'self' quiere decir que al método 'visitar' le paso el
-            # objetto visitante que estoy usando (o sea, este mismo...
-            # self)
+
             nodo.visitar(self)
 
     def __visitarAsignacion(self, nodoActual):
@@ -484,15 +475,6 @@ class Visitante:
         """
         Comparador ::= ( [ <> ] | [ >< ] | [ >- ] | [ <- ] | [^^] | [ -- ] )
 
-        """
-
-        """
-        No estoy seguro si esto se necesita
-
-        if nodoActual.contenido not in ['[ >< ] ', '[ <> ]' ]:
-            nodoActual.atributos['tipo'] = TipoDatos.NÚMERO
-
-        else:
         """
 
         nodoActual.atributos['tipo'] = TipoDatos.CUALQUIERA 
