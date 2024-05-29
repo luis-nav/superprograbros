@@ -1,0 +1,84 @@
+[ ! ] Cantidad de digitos pares de un numero dado
+mundo cantidadDigitosPares [numero] {
+    cantidad [ ? ] 0 [ ; ]
+
+    minijuego [numero [ ^^ ] 0 ]{
+        digitoActual [ ? ] ir a mundo florFuego[numero, 10] [ ; ]
+        parDigito [ ? ] ir a mundo florFuego[digitoActual, 2] [ ; ]
+
+        nivel [parDigito [ <> ] 0]{
+            cantidad [ ? ] [cantidad [ + ] 1] [ ; ]
+        }
+        digito [ ? ] [numero [ / ] 10] [ ; ]
+        numero [ ? ] ir a mundo yoshi[digito] [ ; ]
+    }
+
+    bandera cantidad [ ; ]
+}
+
+[ ! ] Esta funciona retorna la sumatoria de 1 a un número n
+mundo sumatoria [numero] {
+    suma [ ? ] 0 [ ; ]
+    indice [ ? ] 1 [ ; ]
+    minijuego [indice [ <- ] numero] {
+        suma [ ? ] [suma [ + ] indice] [ ; ]
+        indice [ ? ] [indice [ + ] 1] [ ; ]
+    }
+
+    bandera suma [ ; ]
+}
+
+[ ! ] Retorna peach/bowser si el caracter dado es una vocal
+mundo esVocal [caracter] {
+    vocales [ ? ] "aeiou" [ ; ]
+    [ ! ] Son 5
+    cantVocs [ ? ] ir a mundo puntuacion[vocales] [ ; ]
+    indice [ ? ] 0 [ ; ]
+
+    minijuego [indice [ -- ] cantVocs] {
+        vocalActual [ ? ] ir a mundo moneda[vocales, indice] [ ; ]
+        nivel [vocalActual  [ <> ] caracter] {
+            bandera peach [ ; ]
+        }
+        indice [ ? ] [indice [ + ] 1] [ ; ]
+    }
+    
+    bandera bowser [ ; ]
+}
+
+[ ! ] Esta funciona retorna la cantidad de vocales que hay en una palabra dada
+mundo cantidadVocales [palabra] {
+    largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]
+    indice [ ? ] 0 [ ; ]
+    contador [ ? ] 0 [ ; ]
+    minijuego [indice [ -- ] largoPalabra] {
+        char [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
+        lowerChar [ ? ] ir a mundo daisy[char] [ ; ]
+        isVocal [ ? ] ir a mundo esVocal[lowerChar] [ ; ]
+        nivel [ isVocal [ <> ] peach] {
+            contador [ ? ] [contador [ + ] 1] [ ; ]
+        }
+        indice [ ? ] [indice [ + ] 1] [ ; ]
+    }
+    bandera contador [ ; ]
+}
+
+juego {
+    ir a mundo cantidadVocales ["palabra"] [ ; ]
+}
+
+[ ! ] Esta funciona retorna la cantidad de veces que aparece un caracter en un string
+mundo apariciones [caracter, palabra] {
+    largoPalabra [ ? ] ir a mundo puntuacion[palabra] [ ; ]
+    indice [ ? ] 0 [ ; ]
+    contador [ ? ] 0 [ ; ]
+    minijuego [indice [ -- ] largo] {
+        letra [ ? ] ir a mundo moneda[palabra, indice] [ ; ]
+        nivel [letra  [ <> ] caracterActual] {
+            contador [ ? ] [contador [ + ] 1] [ ; ]
+        }
+        indice [ ? ] [indice [ + ] 1] [ ; ]
+    }
+    
+    bandera contador [ ; ]
+}
