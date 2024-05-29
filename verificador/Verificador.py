@@ -40,7 +40,11 @@ class Verificador:
                 ('vidaExtra', TipoDatos.TEXTO),
                 ('florFuego', TipoDatos.ENTERO),
                 ('yoshi', TipoDatos.ENTERO),
-                ('daisy', TipoDatos.TEXTO)]
+                ('daisy', TipoDatos.TEXTO),
+                ('aplastarGoomba', TipoDatos.TEXTO),
+                ('bloque', TipoDatos.TEXTO),
+                ('wario', TipoDatos.TEXTO),
+                ('pausa', TipoDatos.NINGUNO)]
 
         for nombre, tipo in  funcionesAmbienteEstandar:
             nodo = NodoASA(TipoNodo.FUNCION, contenido=nombre, errorInfo={'tipo': tipo})
